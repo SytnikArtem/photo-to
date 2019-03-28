@@ -11,27 +11,27 @@
 		box-sizing: border-box
 
 *::-webkit-input-placeholder
-	color: #d4dae1
+	color: #60666a
 	opacity: 1
 
 *:-moz-placeholder
-	color: #d4dae1
+	color: #60666a
 	opacity: 1
 
 *::-moz-placeholder
-	color: #d4dae1
+	color: #60666a
 	opacity: 1
 
 *:-ms-input-placeholder
-	color: #d4dae1
+	color: #60666a
 	opacity: 1
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
-	color: #d4dae1
+	color: #60666a
 body input:required:valid,
 body textarea:required:valid
-	color: #d4dae1
+	color: #1b2f3e
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
 	margin: 0
@@ -73,9 +73,2356 @@ img
 	height: auto
 .container
 	width: 100%
-	max-width: 1360px
-	padding: 0 40px
+	max-width: 1230px
+	padding: 0 30px
 	margin: 0 auto
+.btn
+	text-decoration: none
+	color: $white
+	outline: none
+	border: none
+	font-size: 14px
+	font-family: "Lato-Bold"
+	text-transform: uppercase
+	letter-spacing: 2.79px
+	padding: 0 23px
+	height: 46px
+	line-height: 46px
+	background: #eb678e
+	position: relative
+	overflow: hidden
+	display: inline-block
+	cursor: pointer
+	transition: color .5s ease
+	&:before
+		height: 100%
+		background: #1D2F3E
+		left: 0
+		top: 0
+		position: absolute
+		content: ''
+		z-index: 1
+		width: 0
+		transition: width .3s ease
+	&:hover
+		&:before
+			width: 100%
+	&-span
+		position: relative
+		z-index: 2
+		display: flex
+		align-items: center
+		justify-content: center
+		&-img
+			width: 10px
+			height: 10px
+			margin-right: 17px
+			margin-top: -2px
+.subtitle
+	color: #1b2f3e
+	font-family: "avantgardegothicc"
+	font-size: 30px
+	line-height: 25.9px
+	text-transform: uppercase
+	letter-spacing: 5.98px
 
-@import "../components/pages/home/style"
+.header
+	padding: 30px 50px
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 3
+	&-row
+		max-width: 340px
+	&-drop
+		position: absolute
+		top: 100%
+		left: 0
+		padding-top: 15px
+		opacity: 0
+		pointer-events: none
+		transition: opacity .5s ease
+		&-list
+			box-shadow: 0 14px 60px rgba(0, 0, 0, 0.16)
+			background-color: $white
+			padding: 30px 70px 30px 30px
+		&-link
+			color: #1b2f3e
+			font-family: "Lato-Bold"
+			font-size: 12px
+			text-transform: uppercase
+			text-decoration: none
+			white-space: nowrap
+		&-item
+			margin-bottom: 13px
+			&:last-child
+				margin-bottom: 0
+	&_dark
+		position: relative
+		.header-nav-link, .header-right-link
+			color: #1b2f3e
+		.header-bottom-link
+			color: #8c9195
+		.header-bottom-list
+			justify-content: flex-end
+		.header-bottom-item
+			margin-right: 0
+			margin-left: 25px
+		.header-top
+			border-bottom: 1px solid rgba(180, 180, 180, 0.2)
+	&-flex
+		display: flex
+		align-items: center
+		justify-content: flex-end
+		position: relative
+	&-logo
+		width: 100px
+		height: 100px
+		border: 1px solid $white
+		border-radius: 50%
+		margin-right: 65px
+		flex-shrink: 0
+	&-main
+		width: 100%
+	&-top
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-bottom: 15px
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+	&-nav
+		&-list
+			display: flex
+			align-items: flex-start
+			justify-content: center
+		&-link
+			color: $white
+			font-size: 13px
+			font-family: "Lato-Bold"
+			text-transform: uppercase
+			text-decoration: none
+		&-item
+			margin-right: 40px
+			position: relative
+			display: flex
+			justify-content: center
+			align-items: center
+			svg
+				width: 8px
+				height: 4px
+				margin-top: -2px
+				margin-left: 2px
+			&:hover
+				.header-drop
+					opacity: 1
+					pointer-events: auto
+	&-bottom
+		padding-top: 15px
+		&-list
+			display: flex
+			align-items: center
+			justify-content: flex-start
+		&-link
+			color: $white
+			font-size: 13px
+			position: relative
+			text-decoration: none
+			&:before
+				position: absolute
+				width: 100%
+				height: 1px
+				background: $white
+				left: 0
+				top: 100%
+				content: ''
+			&_phone
+				font-family: "Lato-Bold"
+				&:before
+					display: none
+		&-item
+			margin-right: 30px
+	&-right
+		display: flex
+		align-items: center
+		justify-content: flex-end
+		&-link
+			color: $white
+			font-size: 13px
+			font-family: "Lato-Bold"
+			text-decoration: none
+			&_basket
+				display: flex
+				align-items: center
+				justify-content: flex-end
+				margin-left: 60px
+		&-block
+			position: relative
+		&-svg
+			width: 16px
+			height: 18px
+			margin: -5px 0 0 12px
+		&-price
+			padding-left: 5px
+	&-basket
+		width: 470px
+		position: absolute
+		top: 30px
+		right: 0
+		box-shadow: 0 14px 60px rgba(0, 0, 0, 0.16)
+		background-color: $white
+		z-index: 2
+		opacity: 0
+		pointer-events: none
+		transition: opacity .5s ease
+		&.active
+			opacity: 1
+			pointer-events: auto
+		&-item
+			display: flex
+			padding: 20px 30px
+			border-bottom: 1px solid #f4f4f4
+			text-decoration: none
+			position: relative
+			transition: background-color .5s ease
+		&-img
+			width: 80px
+			height: 80px
+		&-block
+			margin-left: 20px
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+		&-title
+			color: #252525
+			font-family: Lato
+			font-size: 16px
+			letter-spacing: 0.4px
+		&-label
+			color: #6c7780
+			font-family: "Lato-Bold"
+			font-size: 12px
+			text-transform: uppercase
+			background-color: #eaeaea
+			padding: 3px
+			margin-top: 8px
+			&.active
+				color: #ffffff
+				background-color: #eb678e
+		&-price
+			color: #252525
+			font-size: 15px
+			letter-spacing: 0.15px
+			margin-top: 8px
+		&-value
+			font-family: "Lato-Black"
+		&-close
+			width: 20px
+			height: 20px
+			cursor: pointer
+			position: absolute
+			background: url(../img/close.svg) no-repeat center
+			background-size: 10px 10px
+			top: 20px
+			right: 25px
+		&-main
+			max-height: 450px
+			overflow: auto
+			padding-top: 15px
+		&-bottom
+			padding: 30px
+			background-color: #1b2f3e
+			display: flex
+			justify-content: space-between
+		&-btn
+			padding: 0 30px
+			&:before
+				background: darken(#eb678e, 10%)
+		&-total
+			&-title
+				font-family: "Lato-Bold"
+				font-size: 12px
+				color: rgba(255, 255, 255, 0.5)
+				text-transform: uppercase
+			&-price
+				color: $white
+				font-family: "Lato-Black"
+				font-size: 16px
+			&-value
+				font-size: 32px
+
+.first
+	background-color: #7ac1d5
+	&-slider
+		.slick-dots
+			bottom: 160px
+			max-width: 1170px
+			left: 50%
+			transform: translateX(-50%)
+			text-align: left
+		.slick-dots li button:before
+			width: 8px
+			height: 8px
+			background: #ffffff
+			content: ''
+			opacity: 1
+		.slick-dots li button
+			width: 8px
+			height: 8px
+			padding: 0
+		.slick-dots li, .slick-dots li button
+			width: 8px
+			height: 8px
+		.slick-dots .slick-active
+			transform: scale(1.8)
+		&-title
+			color: $white
+			font-family: "avantgardegothicc"
+			text-transform: uppercase
+			letter-spacing: 7px
+			font-size: 72px
+			line-height: 0.98
+			margin-bottom: 55px
+			&-span
+				display: block
+			&_fourth
+				margin-bottom: 40px
+
+		&-overlay
+			position: absolute
+			right: 0
+			top: 0
+		&-item
+			padding: 235px 0 285px
+			position: relative
+.second
+	margin-top: -100px
+	&-content
+		display: flex
+		padding: 0 50px
+		flex-wrap: wrap
+	&-item
+		position: relative
+		width: 25%
+		height: 600px
+		cursor: pointer
+		overflow: hidden
+		display: flex
+		justify-content: center
+		&:hover
+			.second-item-img
+				transform: translateX(15%)
+		&:first-child
+			background-color: #20b0dc
+		&:nth-child(2)
+			background-color: #ee7ddd
+		&:nth-child(3)
+			background-color: #f5b539
+		&:nth-child(4)
+			background-color: #f47625
+		&:nth-child(5)
+			background-color: #f0d229
+		&:nth-child(6)
+			background-color: #7bc737
+		&:nth-child(7)
+			background-color: #9e4fe7
+		&:nth-child(8)
+			background-color: #f04151
+		&:hover
+			.second-item-content
+				opacity: 1
+				pointer-events: auto
+		&-content
+			position: absolute
+			width: 100%
+			height: 100%
+			left: 0
+			top: 0
+			padding: 40px
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			align-items: flex-start
+			opacity: 0
+			pointer-events: none
+			transition: opacity .5s ease
+		&-img
+			max-width: none
+			//transform: translateX(15%)
+			transition: transform .5s ease
+		&-title
+			color: $white
+			ont-family: "avantgardegothicc"
+			font-size: 30px
+			text-transform: uppercase
+			letter-spacing: 5.98px
+		&-text
+			color: rgba(0, 0, 0, 0.5)
+			font-family: "Lato-Bold"
+			font-size: 12px
+			text-transform: uppercase
+			margin-bottom: 10px
+		&-row
+			margin-top: 20px
+		&-price
+			display: flex
+			align-items: flex-start
+			&-number
+				color: $white
+				font-family: "Lato-Semibold"
+				font-size: 24px
+				text-transform: uppercase
+			&-currency
+				color: $white
+				font-size: 12px
+				margin-top: 3px
+		&-btn
+			width: 100%
+			text-align: center
+			margin-top: 40px
+		&-info
+			width: 100%
+.third
+	padding: 90px 0 80px
+	&-subtitle
+		text-align: center
+	&-description
+		color: #8c9195
+		font-size: 15px
+		line-height: 16px
+		max-width: 365px
+		margin: 20px auto 0
+		text-align: center
+	&-main
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		margin-top: 60px
+	&-item
+		width: 370px
+		height: 340px
+		position: relative
+		overflow: hidden
+		margin-bottom: 30px
+		&:hover
+			.third-item-info
+				opacity: 1
+				transform: translate3d(0,0,0) scale(1)
+			.third-item-img
+				transform: scale(1)
+		&-info
+			position: absolute
+			width: calc(100% - 60px)
+			height: calc(100% - 60px)
+			left: 30px
+			top: 30px
+			background-color: #eb678e
+			padding: 35px 40px 40px
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: space-between
+			transform: translate3d(0,20px,0) scale(1.1)
+			opacity: 0
+			transition: opacity 0.35s, transform 0.35s
+		&-title
+			color: $white
+			font-family: "avantgardegothicc"
+			font-size: 24px
+			text-transform: uppercase
+			letter-spacing: 4.78px
+			text-align: center
+		&-row
+			display: flex
+			justify-content: space-between
+			width: 100%
+			padding: 0 15px
+		&-block
+			width: 50%
+			padding-right: 10px
+			&:last-child
+				padding-left: 30px
+				border-left: 1px solid rgba(255, 255, 255, 0.2)
+		&-text
+			color: rgba(0, 0, 0, 0.5)
+			font-family: "Lato-Bold"
+			font-size: 12px
+			text-transform: uppercase
+			margin-bottom: 8px
+		&-value
+			display: flex
+			align-items: flex-end
+			color: $white
+			font-family: "Lato-Semibold"
+			font-size: 12px
+			line-height: 20px
+			text-transform: uppercase
+		&-number
+			font-size: 24px
+			line-height: 26px
+		&-link
+			color: $white
+			font-family: "Lato-Bold"
+			font-size: 14px
+			text-transform: uppercase
+			letter-spacing: 2.79px
+			text-decoration: none
+		&-img
+			transform: scale(1.15)
+			transition: transform 0.35s
+			width: 100%
+			height: 100%
+			object-fit: cover
+.fourth
+	margin: 0 50px
+	background: url(../img/fourth-bg.jpg) no-repeat top center
+	background-size: cover
+	padding: 100px 0
+	&-text
+		max-width: 500px
+		color: $white
+		font-size: 16px
+		line-height: 24px
+	&-btn
+		margin-top: 45px
+		&_services
+			margin-top: 185px
+.fifth
+	margin: 0 50px
+	padding: 60px 0
+	overflow: hidden
+	&-row
+		display: flex
+		justify-content: space-between
+		padding: 40px 0
+		position: relative
+		&_custom
+			&:before
+				content: ''
+				width: 300%
+				height: calc(100% + 220px)
+				background-color: #f6f6f5
+				position: absolute
+				top: 50%
+				left: 50%
+				z-index: -1
+				transform: translate(-50%, -50%)
+		&_reverse
+			flex-direction: row-reverse
+			.fifth-left
+				margin-right: 0
+
+	&-left
+		width: 670px
+		height: 420px
+		margin-right: 30px
+	&-right
+		width: 400px
+		padding: 50px 0
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: flex-start
+		&-title
+			color: #1b2f3e
+			font-family: "avantgardegothicc"
+			font-size: 30px
+			line-height: 32px
+			text-transform: uppercase
+			letter-spacing: 5.98px
+			margin-bottom: 40px
+		&-text
+			color: #5b6268
+			font-size: 15px
+			line-height: 20px
+			margin-bottom: 20px
+		&-span
+			display: inline-block
+	&-btn
+		margin-top: 15px
+	&-img
+		width: 100%
+		height: 100%
+		object-fit: cover
+.footer
+	background-color: #1b2f3e
+	padding: 65px 50px 0
+	&-top
+		display: flex
+	&-block
+		width: 25%
+		padding-left: 50px
+	&-title
+		color: #eb678e
+		font-family: "avantgardegothicc"
+		font-size: 14px
+		text-transform: uppercase
+		letter-spacing: 2.79px
+		margin-bottom: 20px
+	&-item
+		padding: 6px 0
+		&-link
+			color: #c2cbd1
+			font-size: 15px
+			text-decoration: none
+			transition: color .5s ease
+			&:hover
+				color: $white
+	&-contacts
+		display: flex
+		align-items: flex-start
+		flex-direction: column
+		margin-top: 30px
+	&-link
+		text-decoration: none
+		color: $white
+		font-family: "Lato-Bold"
+		font-size: 14px
+		margin-bottom: 12px
+		&_mail
+			text-decoration: underline
+	&-bottom
+		display: flex
+		align-items: center
+		justify-content: space-between
+		color: #5b6268
+		font-size: 13px
+		padding: 25px 0
+		border-top: 1px solid rgba(255, 255, 255, 0.1)
+		margin-top: 40px
+		&-info
+			display: flex
+			align-items: center
+			justify-content: flex-end
+		&-img
+			width: 120px
+		&-link
+			margin-top: -2px
+.catalog
+	padding: 50px 0
+	&-subtitle
+		text-align: center
+		margin: -40px 0 50px
+	&-item
+		position: relative
+		width: 25%
+		height: 600px
+		cursor: pointer
+		overflow: hidden
+		display: flex
+		align-items: flex-end
+		justify-content: center
+		transition: background-color .5s ease
+		.second-item-btn
+			opacity: 0
+			pointer-events: none
+			transition: opacity .5s ease
+		&:hover
+			background: #f6f6f6
+			.second-item-btn
+				opacity: 1
+				pointer-events: auto
+		&-content
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			padding: 40px
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			z-index: 2
+		&-text
+			color: rgba(0, 0, 0, 0.5)
+			font-family: "Lato-Bold"
+			font-size: 12px
+			text-transform: uppercase
+		.second-item-price-number, .second-item-price-currency
+			color: #000000
+		.second-item-price
+			margin-top: 10px
+.header_dark .header-bottom
+	display: flex
+	justify-content: space-between
+.header-row-link
+	color: #8c9195
+	font-size: 13px
+	position: relative
+	padding-right: 20px
+	text-decoration: none
+	&:after
+		content: '/'
+		position: absolute
+		right: 5px
+		top: 55%
+		transform: translateY(-50%)
+		line-height: 13px
+	&:last-child:after
+		display: none
+.slick-slide
+	outline: none
+.item
+	padding: 25px 0 85px
+	&-main
+		display: flex
+		justify-content: space-between
+		padding-bottom: 60px
+	&-left
+		width: 600px
+	&-dots
+		margin-top: 10px
+		width: calc(100% + 10px)
+		margin-left: -5px
+		&-img
+			width: 95px
+			padding: 10px 5px
+			max-width: 95px
+		&-item
+			background-color: #f6f6f6
+			height: 150px
+			margin: 0 5px
+			display: flex!important
+			align-items: center
+			justify-content: center
+			cursor: pointer
+			border: 2px solid transparent
+			&.slick-current
+				border-color: #eb678e
+	&-slider
+		&-item
+			background-color: #f6f6f6
+		&-img
+			width: 420px
+			margin: 0 auto
+			padding: 40px 0
+	&-info
+		margin-top: 40px
+		&-title
+			color: rgba(0, 0, 0, 0.5)
+			font-family: "Lato-Bold"
+			font-size: 12px
+			text-transform: uppercase
+		&-text
+			color: #000000
+			font-family: "Lato-Semibold"
+			font-size: 15px
+			margin-top: 10px
+	&-right
+		width: 470px
+		padding-top: 5px
+	&-tabs
+		margin-left: -5px
+		&-link
+			color: #000000
+			font-family: "Lato-Bold"
+			font-size: 12px
+			text-transform: uppercase
+			text-decoration: none
+			padding: 3px 5px
+			margin-right: 10px
+			&.active
+				color: $white
+				background: #eb678e
+	&-subtitle
+		margin-top: 30px
+		letter-spacing: 3px
+	&-form
+		margin-top: 30px
+		&-row
+			margin-bottom: 18px
+		&-title
+			color: rgba(0, 0, 0, 0.5)
+			font-family: "Lato-Bold"
+			font-size: 12px
+			text-transform: uppercase
+			margin-bottom: 15px
+		&-flex
+			display: flex
+			justify-content: flex-start
+			flex-wrap: wrap
+			&_last
+				align-items: center
+				justify-content: space-between
+				padding-top: 25px
+				border-top: 1px solid #f3f3f3
+		&-label
+			position: relative
+			cursor: pointer
+			margin-right: 10px
+			margin-bottom: 10px
+		&-input
+			width: 0
+			height: 0
+			position: absolute
+			overflow: hidden
+			opacity: 0
+			&:checked ~ span
+				border: 2px solid #eb678e
+				color: #eb678e
+				&:before
+					opacity: 1
+				rect
+					fill: #eb678e
+			&:checked ~ .item-method-span_first
+				color: #3ebde7
+				border: 2px solid #3ebde7
+			&:checked ~ .item-method-span_third
+				color: #855ebf
+				border: 2px solid #855ebf
+		&-link
+			color: #1b2f3e
+			font-size: 13px
+			text-decoration: underline
+			text-transform: none
+			display: inline-block
+			position: relative
+			top: -2px
+		&-block
+			display: flex
+			align-items: center
+			justify-content: flex-start
+	&-color
+		width: 38px
+		height: 38px
+		&:nth-child(10n + 10)
+			margin-right: 0
+		&-span
+			width: 100%
+			height: 100%
+			position: absolute
+			left: 0
+			top: 0
+			border: 2px solid transparent
+			transition: all .5s ease
+			&:before
+				content: ''
+				position: absolute
+				width: 100%
+				height: 100%
+				left: 0
+				top: 0
+				opacity: 0
+				background: url(../img/check-white.svg) no-repeat center
+				background-size: 14px 11px
+				transition: opacity .5s ease
+			&_first
+				background: #1a529c
+			&_second
+				background: #1db1e2
+			&_third
+				background: #1de26c
+			&_fourth
+				background: #588c36
+			&_fifth
+				background: #387b0c
+			&_sixth
+				background: #36a8ac
+			&_seventh
+				background: #f2b615
+			&_eight
+				background: #dc7529
+			&-ninth
+				background: #a45115
+			&-ten
+				background: #a41b15
+			&-eleven
+				background: #ea3349
+			&-twelve
+				background: #ea336b
+			&-thirteen
+				background: #b22883
+			&-fourteen
+				background: #7628b2
+			&-fifteen
+				background: #0f0f0f
+			&-sixteen
+				background: $white
+				border: 2px solid #e6e6e6
+				&:before
+					background: url(../img/check.svg) no-repeat center
+					background-size: 14px 11px
+	&-size
+		width: 38px
+		height: 38px
+		&:nth-child(10n + 10)
+			margin-right: 0
+		&-span
+			color: #1b2f3e
+			font-family: "Lato-Black"
+			font-size: 14px
+			text-transform: uppercase
+			width: 100%
+			height: 100%
+			display: flex
+			align-items: center
+			justify-content: center
+			border: 2px solid #e6e6e6
+			transition: all .5s ease
+	&-type
+		width: 86px
+		height: 86px
+		margin-right: 10px
+		&:nth-child(5n + 5)
+			margin-right: 0
+		&-span
+			position: absolute
+			width: 100%
+			height: 100%
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: flex-end
+			border: 2px solid #e6e6e6
+			padding: 10px 5px
+			color: #1b2f3e
+			font-family: "Lato-Black"
+			font-size: 11px
+			text-transform: uppercase
+			transition: all .5s ease
+			&-text
+				margin-top: 15px
+			rect
+				transition: fill .5s ease
+	&-method
+		margin-right: 0
+		width: 100%
+		&-span
+			width: 100%
+			min-height: 97px
+			border: 2px solid #e6e6e6
+			position: relative
+			display: flex
+			flex-direction: column
+			color: #1b2f3e
+			padding: 15px 40px 15px 20px
+			transition: all .5s ease
+			&-title
+				font-family: "Lato-Black"
+				font-size: 12px
+				text-transform: uppercase
+			&-text
+				color: #8c9195
+				font-size: 14px
+				line-height: 19.93px
+				margin-top: 10px
+		&-label
+			position: absolute
+			top: 0
+			right: 0
+			color: $white
+			font-family: "Lato-Bold"
+			font-size: 10px
+			text-transform: uppercase
+			padding: 5px
+			z-index: 2
+			&_first
+				background-color: #3ebde7
+			&_second
+				background-color: #eb678e
+			&_third
+				background-color: #855ebf
+	&-file
+		width: 100%
+		margin-right: 0
+		&-span
+			background-color: #f3f3f3
+			padding: 12px 21px
+			display: inline-block
+			position: relative
+			&.active
+				width: 100%
+			&-title
+				color: #1b2f3e
+				font-family: "Lato-Black"
+				font-size: 11px
+				text-transform: uppercase
+			&-text
+				color: #1b2f3e
+				font-size: 13px
+			&-close
+				width: 14px
+				height: 14px
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				right: 15px
+				background: url(../img/none.svg) no-repeat center
+				background-size: 14px 14px
+				opacity: 0
+				pointer-events: none
+				&.active
+					opacity: 1
+					pointer-events: auto
+	&-number
+		width: 85px
+		border: 2px solid #e4e4e4
+		height: 46px
+		display: flex
+		justify-content: space-between
+		&-input
+			width: 60px
+			height: 100%
+			border: none
+			outline: none
+			text-align: center
+			color: #303030
+			font-family: "Lato-Bold"
+			font-size: 14px
+			padding: 0 10px
+		&-btns
+			width: 25px
+			position: relative
+			display: flex
+			flex-direction: column
+			cursor: pointer
+			&:before
+				width: 2px
+				height: 30px
+				left: -2px
+				top: 50%
+				transform: translateY(-50%)
+				position: absolute
+				content: ''
+				background: #e4e4e4
+		&-btn
+			width: 100%
+			height: 50%
+			display: flex
+			align-items: center
+			justify-content: center
+			&_up
+				img
+					transform: rotate(90deg)
+					position: relative
+					top: 4px
+			&_down
+				img
+					transform: rotate(90deg) scale(-1, 1)
+					position: relative
+					top: -4px
+		&-img
+			width: 5px
+	&-price
+		margin-left: 30px
+		&-title
+			color: rgba(0, 0, 0, 0.5)
+			font-family: "Lato-Bold"
+			font-size: 12px
+			text-transform: uppercase
+		&-number
+			display: flex
+			align-items: flex-end
+			color: #1b2f3e
+			font-family: "Lato-Black"
+			font-size: 32px
+			text-transform: uppercase
+		&-currency
+			font-size: 16px
+			text-transform: lowercase
+			margin: 0 0 4px 4px
+	&-table
+		border-top: 1px solid #e8e8e8
+		padding-top: 80px
+		&-subtitle
+			letter-spacing: 3px
+			text-align: center
+		&-flex
+			display: flex
+			justify-content: space-between
+			margin-top: 55px
+		&-left
+			width: 900px
+		&-right
+			width: 220px
+		&-row
+			display: flex
+			align-items: center
+			&:first-child
+				.item-table-item
+					border-top: 1px solid #e4e4e4
+					color: #1b2f3e
+					font-family: "Lato-Black"
+		&-title
+			width: 270px
+			color: #757b7f
+			font-size: 14px
+		&-item
+			color: #5a6167
+			font-size: 14px
+			text-transform: uppercase
+			width: 90px
+			border-bottom: 1px solid #e4e4e4
+			text-align: center
+			padding: 14px 0
+		&-img
+			position: relative
+			right: -5px
+			top: -5px
+.price
+	padding: 20px 0 50px
+	&-main
+		display: flex
+		justify-content: space-between
+	&-left
+		width: 900px
+	&-right
+		width: 200px
+	&-table
+		display: flex
+		flex-direction: column
+		margin-top: 35px
+		&-top
+			display: flex
+			align-items: center
+			justify-content: flex-start
+			padding: 11px 0
+			border-bottom: 1px solid #e4e4e4
+		&-subtop
+			display: flex
+			align-items: center
+			justify-content: flex-end
+			.price-item-text
+				color: #1b2f3e
+		&-row
+			display: flex
+			padding: 15px 0
+			&:nth-child(odd)
+				background-color: #f7f7f7
+		&_big
+			.price-column
+				width: 56px
+			.price-color
+				width: 115px
+			.price-edition
+				width: 56px
+			.price-format
+				width: 170px
+	&-column
+		width: 120px
+	&-format
+		width: 170px
+	&-color
+		width: 250px
+		.price-item-text
+			color: #1b2f3e
+	&-item
+		margin-bottom: 35px
+		&:last-child
+			margin-bottom: 0
+		&_pad
+			margin-bottom: 75px
+		&-title
+			color: #757b7f
+			font-size: 12px
+			text-transform: uppercase
+		&-subtitle
+			letter-spacing: 3px
+		&-text
+			color: #5a6167
+			font-size: 14px
+			border-bottom: 1px solid #ececec
+			padding: 13px 0
+			&:last-child
+				border: none
+	&-format
+		&-item
+			border: 2px solid #ec7497
+			text-align: center
+			display: flex
+			align-items: center
+			justify-content: center
+			flex-direction: column
+			width: 60px
+			height: 60px
+			margin: 15px 0 0 30px
+			&-subtitle
+				color: #1b2f3e
+				font-family: "Lato-Black"
+				font-size: 18px
+				text-transform: uppercase
+			&-text
+				color: #757b7f
+				font-size: 12px
+				text-transform: uppercase
+				margin-top: -2px
+	&-list
+		margin-top: 60px
+		&-link
+			color: #1b2f3e
+			font-family: "Lato-Bold"
+			font-size: 12px
+			font-weight: 700
+			text-transform: uppercase
+			transition: all .5s ease
+			text-decoration: none
+			&:hover, &.active
+				color: #eb678e
+		&-item
+			padding: 6.5px 0
+.small-text
+	display: block
+	font-size: 10px
+	line-height: 4px
+.services
+	padding: 20px 0 70px
+	&-main
+		padding: 0 50px
+	&-content
+		padding: 95px 0
+		&-flex
+			display: flex
+			justify-content: flex-start
+		&-left
+			width: 600px
+			margin-right: 70px
+		&-right
+			width: 430px
+		&-text
+			color: #1b2f3e
+			font-size: 16px
+			line-height: 26px
+			margin-bottom: 25px
+			&:last-child
+				margin-bottom: 0
+		&-title
+			color: #1b2f3e
+			font-family: "avantgardegothicc"
+			font-size: 16px
+			text-transform: uppercase
+			letter-spacing: 1.59px
+		&-item
+			color: #1b2f3e
+			font-size: 18px
+			padding: 8px 0 8px 38px
+			background: url(../img/done.svg) no-repeat left top 10px
+			background-size: 18px 18px
+		&-list
+			margin-top: 15px
+			&_none
+				.services-content-item
+					background: url(../img/none.svg) no-repeat left top 10px
+					background-size: 18px 18px
+					color: #8c9195
+		&-block
+			margin-bottom: 25px
+			&:last-child
+				margin-bottom: 0
+	&-gallery
+		&-img
+			width: 100%
+			height: 100%
+			object-fit: cover
+		&-block
+			height: 17.5vw
+			&:first-child
+				height: 35vw
+		&-item
+			display: flex!important
+			flex-direction: column
+			&:nth-child(even)
+				flex-direction: column-reverse
+		&-tabs
+			width: 100%
+			max-width: 1230px
+			padding: 0 30px
+			margin: 0 auto
+			position: relative
+			display: flex
+			justify-content: center
+			&:before
+				width: calc(100% - 60px)
+				height: 1px
+				position: absolute
+				top: 0
+				left: 30px
+				content: ''
+				background-color: rgba(180, 180, 180, 0.2)
+		&-tab
+			color: #000000
+			font-family: "Lato-Bold"
+			font-size: 13px
+			text-transform: uppercase
+			text-decoration: none
+			padding: 30px 0 25px
+			display: inline-block
+			margin: 0 25px
+			position: relative
+			&.active
+				&:before
+					width: 100%
+			&:before
+				position: absolute
+				top: 0
+				left: 0
+				width: 0
+				height: 2px
+				background-color: #000000
+				content: ''
+				transition: width .5s ease
+		&-main
+			.slick-next, .slick-prev
+				width: 60px
+				height: 60px
+				z-index: 2
+				top: calc(100% - 110px)
+				background: #ffffff
+			.slick-next:before, .slick-prev:before
+				width: 100%
+				height: 100%
+				content: ''
+				display: block
+				background: url(../img/arrow.svg) no-repeat center
+				background-size: 10px 18px
+			.slick-next:before
+				transform: rotate(180deg)
+			.slick-next
+				left: 50%
+			.slick-prev
+				left: calc(50% - 60px)
+	&-table
+		margin-top: 100px
+		&-subtitle
+			text-align: center
+		&-description
+			color: #8c9195
+			font-size: 15px
+			line-height: 16px
+			max-width: 365px
+			margin: 20px auto 55px
+			text-align: center
+		.price-column
+			width: 187.5px
+		.price-format
+			width: 170px
+		.price-color
+			width: 250px
+		.price-table_big
+			.price-column
+				width: 68.2px
+			.price-format
+				width: 170px
+			.price-color
+				width: 250px
+.news
+	margin-top: -20px
+	padding-bottom: 80px
+	&-content
+		border-bottom: 1px solid rgba(180, 180, 180, 0.2)
+		padding-bottom: 10px
+	&-more
+		text-align: center
+		margin: 15px auto 0
+		&-link
+			color: #000000
+			font-family: "Lato-Bold"
+			font-size: 13px
+			text-transform: uppercase
+			text-decoration: none
+	.fifth-right-title
+		margin-bottom: 25px
+.post
+	padding: 5px 0 50px
+	&-subtitle
+		text-align: center
+		letter-spacing: 3px
+	&-description
+		max-width: 555px
+		color: #5b6268
+		font-size: 16px
+		line-height: 23.91px
+		text-align: center
+		margin: 30px auto 0
+	&-content
+		margin: 45px 50px 0
+		background: #f6f6f5
+		&-img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			position: relative
+			z-index: 2
+		&-text
+			color: #1b2f3e
+			font-size: 16px
+			line-height: 26px
+			margin: 0 auto 25px
+			max-width: 630px
+		&-first
+			max-width: 830px
+			height: 440px
+			margin: 35px auto
+		&-second
+			margin: 35px auto
+			max-width: 630px
+			height: 780px
+		&-bottom
+			margin: 45px 0 0
+			display: flex
+			flex-wrap: wrap
+			position: relative
+			&:before
+				width: 100vw
+				height: calc(100% - 50px)
+				position: absolute
+				content: ''
+				bottom: 0
+				left: 50%
+				transform: translateX(-50%)
+				background: #ffffff
+			&-img
+				width: 33.33%
+				position: relative
+	&-top
+		position: relative
+		width: 100%
+		height: 420px
+		margin-bottom: 40px
+		&:before
+			width: 100vw
+			height: calc(100% - 50px)
+			background: #ffffff
+			content: ''
+			top: 0
+			left: 50%
+			transform: translateX(-50%)
+			position: absolute
+.contacts
+	padding: 0 0 90px
+	&-map
+		width: 100%
+		height: 420px
+	&-info
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		margin-top: 45px
+		&-left
+			width: 500px
+			border-right: 1px solid #ebebeb
+		&-right
+			width: 670px
+			padding: 0 50px
+		&-title
+			color: rgba(0, 0, 0, 0.5)
+			font-family: "Lato-Bold"
+			font-size: 12px
+			text-transform: uppercase
+			margin-bottom: 13px
+		&-block
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+			margin-bottom: 27px
+			&:last-child
+				margin-bottom: 0
+		&-text
+			color: #000000
+			font-family: "Lato-Semibold"
+			font-size: 15px
+			margin-bottom: 5px
+			text-decoration: none
+		&-row
+			display: flex
+			justify-content: flex-start
+			margin-bottom: 11px
+		&-label
+			width: 200px
+			color: #545454
+			font-size: 13px
+		&-value
+			width: calc(100% - 200px)
+			color: #000000
+			font-size: 13px
+			font-family: "Lato-Semibold"
+		&-table
+			margin-top: 25px
+.order
+	padding: 20px 0 45px
+	&-content
+		display: flex
+		justify-content: space-between
+	&-left
+		width: 600px
+		margin-right: 40px
+	&-right
+		width: 470px
+	&-item
+		display: flex
+		justify-content: flex-start
+		align-items: flex-start
+		margin-top: 30px
+		position: relative
+		padding-bottom: 8px
+		border-bottom: 1px solid #f4f4f4
+		&:first-child
+			margin-top: 0
+		&-close
+			width: 20px
+			height: 20px
+			position: absolute
+			top: 0
+			right: -5px
+			background: url(../img/close.svg) no-repeat center
+			background-size: 10px 10px
+			cursor: pointer
+	&-list
+		margin-top: 55px
+	&-photo
+		width: 80px
+		height: 80px
+		flex-shrink: 0
+		margin-right: 20px
+	&-subtitle
+		letter-spacing: 3px
+	&-info
+		width: 100%
+		&-title
+			color: #252525
+			font-family: Lato
+			font-size: 20px
+			letter-spacing: 0.2px
+			margin-bottom: 10px
+		&-row
+			display: flex
+			border-top: 1px solid #f4f4f4
+			font-family: "Lato-Bold"
+			font-size: 12px
+			padding: 12.5px 0
+		&-key
+			width: 54%
+			color: rgba(0, 0, 0, 0.5)
+		&-value
+			width: 46%
+			color: #000000
+		&-table
+			margin-top: 20px
+	&-form
+		background-color: #f8f8f8
+		margin-top: 60px
+		&-title
+			color: rgba(0, 0, 0, 0.5)
+			font-family: "Lato-Bold"
+			font-size: 12px
+			text-transform: uppercase
+			margin-bottom: 13px
+		&-item
+			padding: 25px 30px 30px 30px
+			border-bottom: 1px solid $white
+		&-label
+			display: flex
+			justify-content: flex-start
+			position: relative
+			padding: 7px 0
+		&-radio
+			position: absolute
+			opacity: 0
+			pointer-events: none
+			&:checked ~ .order-form-check
+				border-color: #eb678e
+				&:before
+					opacity: 1
+			&:checked ~ .order-form-text
+				color: #1b2f3e
+		&-check
+			width: 16px
+			height: 16px
+			border: 2px solid #cacaca
+			position: relative
+			border-radius: 50%
+			margin-right: 15px
+			transition: all .5s ease
+			&:before
+				position: absolute
+				content: ''
+				width: 8px
+				height: 8px
+				background-color: #eb678e
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%)
+				border-radius: 50%
+				opacity: 0
+				transition: opacity .5s ease
+		&-text
+			color: #5d6265
+			font-size: 14px
+			transition: color .5s ease
+		&-input
+			width: 100%
+			background-color: $white
+			height: 38px
+			line-height: 38px
+			border: none
+			outline: none
+			padding: 0 15px
+			font-size: 13px
+			color: #1b2f3e
+			margin-bottom: 5px
+		&-row
+			display: flex
+			justify-content: flex-start
+			margin-bottom: 25px
+		&-key
+			width: 125px
+			color: #283947
+			font-size: 14px
+		&-price
+			color: #1b2f3e
+			font-family: "Lato-Black"
+			font-size: 12px
+			&-number
+				font-size: 16px
+		&-btn
+			width: 100%
+.select2-container
+	width: 100%!important
+	outline: none
+	margin-bottom: 5px
+	&:last-child
+		margin-bottom: 0
+.select2-container .select2-selection--single
+	height: auto
+	outline: none
+	border-radius: 0
+	border: 1px solid transparent
+	&:focus
+		border: 1px solid #bcbcbc
+.select2-container--default .select2-selection--single .select2-selection__rendered
+	line-height: 38px
+	color: #60666a
+	font-size: 13px
+	letter-spacing: 0.13px
+	padding: 0 15px
+.select2-container--default .select2-selection--single .select2-selection__arrow
+	height: 100%
+.select2-results__option
+	color: #252525
+	font-size: 14px
+	letter-spacing: 0.14px
+	padding: 11px 15px
+	border-bottom: 1px solid #f4f4f4
+	line-height: 1
+	&:last-child
+		border-bottom: none
+.select2-container--default .select2-results__option[aria-selected=true]
+	background: darken(#eb678e, 10%)
+	color: $white
+.select2-container--default .select2-results__option--highlighted[aria-selected]
+	background: #eb678e
+	color: $white
+.select2-container--default .select2-selection--single .select2-selection__placeholder
+	color: #60666a
+	font-size: 13px
+	letter-spacing: 0.13px
+.select2-search--dropdown
+	display: none
+	padding: 0
+.select2-container--open .select2-dropdown--below
+	border-radius: 0
+.login
+	padding: 30px 0 90px
+	position: relative
+	min-height: 100vh
+	&-close
+		width: 30px
+		height: 30px
+		position: absolute
+		top: 50px
+		right: 50px
+		background: url(../img/close_popup.svg) no-repeat center
+		background-size: 30px 30px
+	&-subtitle
+		text-align: center
+		letter-spacing: 3px
+	&-links
+		display: flex
+		justify-content: space-between
+		max-width: 540px
+		margin: 35px auto 0
+	&-link
+		width: 260px
+		height: 46px
+		line-height: 46px
+		text-decoration: none
+		padding: 0 10px 0 50px
+		color: #ffffff
+		font-family: "Lato-Bold"
+		font-size: 12px
+		text-transform: uppercase
+		letter-spacing: 2.39px
+		transition: background-color .5s ease
+		&_vk
+			background: #6383a8 url(../img/vk.svg) no-repeat left 17px center
+			background-size: 18px 11px
+			&:hover
+				background-color: darken(#6383a8, 10%)
+		&_fb
+			background: #3b5998 url(../img/facebook.svg) no-repeat left 21px center
+			background-size: 18px 18px
+			padding-left: 65px
+			&:hover
+				background-color: darken(#3b5998, 10%)
+	&-or
+		color: #8c9195
+		font-size: 14px
+		padding: 35px 0
+		text-align: center
+	&-input
+		width: 100%
+		outline: none
+		border: 2px solid #e4e4e4
+		height: 46px
+		line-height: 46px
+		padding: 0 10px
+		text-align: center
+		color: #303030
+		font-family: "Lato-Bold"
+		font-size: 14px
+		letter-spacing: 0.14px
+		margin-bottom: 10px
+	&-form
+		max-width: 370px
+		margin: 0 auto
+	&-row
+		margin: 13px 0 22px
+		display: flex
+		align-items: center
+		justify-content: space-between
+		&-link
+			color: #1b2f3e
+			font-size: 14px
+			text-decoration: underline
+			font-family: "Lato-Bold"
+	&-label
+		display: flex
+		align-items: center
+		justify-content: flex-start
+		position: relative
+		&-input
+			position: absolute
+			opacity: 0
+			pointer-events: none
+			&:checked ~ .login-label-span:before
+				opacity: 1
+		&-span
+			width: 16px
+			height: 16px
+			border: 2px solid #e4e4e4
+			flex-shrink: 0
+			margin-right: 15px
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				width: 10px
+				height: 5px
+				border-bottom: 2px solid #eb678e
+				border-left: 2px solid #eb678e
+				transform: rotate(-45deg)
+				top: 2px
+				left: 1px
+				opacity: 0
+				transition: opacity .5s ease
+		&-text
+			color: #8c9195
+			font-size: 14px
+			padding-top: 1px
+	&-subtext
+		text-align: center
+		color: #8c9195
+		font-family: Lato
+		font-size: 14px
+		margin-top: 25px
+		&-link
+			color: #1b2f3e
+			font-family: "Lato-Bold"
+	&-logo
+		width: 100px
+		height: 100px
+		border: 1px solid #1b2f3e
+		display: block
+		margin: 0 auto 50px
+		border-radius: 50%
+	&-bottom
+		color: #5b6268
+		text-align: center
+		font-size: 13px
+		position: absolute
+		width: 100%
+		bottom: 15px
+		left: 50%
+		transform: translateX(-50%)
+.view
+	padding: 15px 0 50px
+	&-content
+		display: flex
+		justify-content: space-between
+	&-left
+		width: 600px
+		background: #f6f6f6
+		height: 600px
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-right: 30px
+	&-right
+		width: 470px
+		padding-top: 10px
+	&-order
+		color: #1b2f3e
+		font-family: "Lato-Bold"
+		font-size: 12px
+		text-decoration: underline
+		text-transform: uppercase
+		margin-bottom: 35px
+	&-subtitle
+		letter-spacing: 3px
+	&-table
+		margin-top: 30px
+		border-bottom: 1px solid #f4f4f4
+	.order-info-key
+		width: 58%
+		&_total
+			font-size: 14px
+			color: #283947
+	.order-info-value
+		width: 42%
+	&-total
+		margin: 25px 0
+		.order-info-row
+			border: none
+	&-btn
+		padding: 0 30px
+.order-info-value-number
+	font-size: 16px
+.profile
+	padding: 20px 0 20px
+	&-content
+		display: flex
+		justify-content: space-between
+		padding: 40px 0 20px
+	&-list
+		width: 700px
+		margin-right: 30px
+		position: relative
+		transition: height .5s ease
+	&-item
+		opacity: 0
+		pointer-events: none
+		position: absolute
+		width: 100%
+		transition: opacity .5s ease
+		&.active
+			opacity: 1
+			pointer-events: auto
+	&-right
+		width: 400px
+		&-text
+			color: #5b6268
+			font-size: 15px
+			line-height: 20px
+	&-subtitle
+		letter-spacing: 3px
+	&-top
+		display: flex
+		align-items: center
+		justify-content: space-between
+		border-bottom: 1px solid #f4f4f4
+	&-tab
+		color: #000000
+		font-family: "Lato-Bold"
+		font-size: 12px
+		text-transform: uppercase
+		text-decoration: none
+		margin-right: 20px
+		padding: 3px 3px
+		position: relative
+		transition: color .3s ease
+		&:before
+			width: 0
+			height: 100%
+			content: ''
+			position: absolute
+			left: 0
+			top: 0
+			background: #000000
+			transition: width .3s ease
+			z-index: -1
+		&:hover, &.active
+			color: #ffffff
+			&:before
+				width: 100%
+	&-main
+		margin-top: 20px
+	&-table
+		border-bottom: 1px solid #f4f4f4
+		&-row
+			display: flex
+			align-items: center
+			justify-content: flex-start
+			border-top: 1px solid #f4f4f4
+			padding: 12px 0
+			&:last-child
+				.profile-table-value
+					text-transform: none
+		&-key
+			width: 39%
+			color: rgba(0, 0, 0, 0.5)
+			font-family: "Lato-Bold"
+			font-size: 12px
+			text-transform: uppercase
+		&-value
+			width: 61%
+			color: #1b2f3e
+			font-family: "Lato-Bold"
+			font-size: 12px
+			text-transform: uppercase
+	&-top
+		padding: 10px 0
+	&-btns
+		display: flex
+		justify-content: flex-start
+		margin-top: 35px
+	&-btn
+		font-size: 11px
+		height: 40px
+		line-height: 40px
+		background: #f3f3f3
+		color: #1b2f3e
+		font-family: "Lato-Black"
+		letter-spacing: normal
+		padding: 0 20px
+		&:hover
+			color: #ffffff
+		&_delete
+			margin-left: 30px
+			color: #757b80
+		&_pass
+			margin-top: 50px
+		&_save
+			margin-top: 30px
+	&-out
+		color: #c64848
+		font-family: "Lato-Bold"
+		font-size: 12px
+		text-transform: uppercase
+		text-decoration: none
+	&-cart
+		border-radius: 10px
+		background-color: #1b2f3e
+		background-image: linear-gradient(-56deg, #c74f6e 0%, #e46464 100%)
+		padding: 25px 30px
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		margin-bottom: 25px
+		&-title
+			text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1)
+			color: #ffffff
+			font-family: "avantgardegothicc"
+			font-size: 22px
+			letter-spacing: 2.19px
+			margin-bottom: 7px
+		&-text
+			color: rgba(255, 255, 255, 0.5)
+			font-size: 14px
+		&-bottom
+			display: flex
+			justify-content: space-between
+			margin-top: 75px
+		&-subtitle
+			color: rgba(255, 255, 255, 0.5)
+			font-family: "Lato-Bold"
+			font-size: 12px
+			text-transform: uppercase
+		&-value
+			text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1)
+			color: $white
+			font-family: "avantgardegothicc"
+			font-size: 22px
+			letter-spacing: 2.19px
+			margin-top: 5px
+		&-item
+			&_right
+				text-align: right
+	&-bottom
+		margin-top: 25px
+		&-title
+			color: #1b2f3e
+			font-family: "Lato-Bold"
+			font-size: 12px
+			text-transform: uppercase
+			letter-spacing: 2.39px
+		&-list
+			display: flex
+			justify-content: flex-start
+			flex-wrap: wrap
+			padding-top: 30px
+			margin-top: 20px
+			border-top: 1px solid rgba(180, 180, 180, 0.2)
+		&-item
+			width: calc(25% - 22.5px)
+			margin-right: 30px
+			padding: 30px 15px
+			display: flex
+			align-items: center
+			justify-content: space-between
+			background-color: #f6f6f6
+			margin-bottom: 30px
+			&:nth-child(4n + 4)
+				margin-right: 0
+		&-img
+			max-width: 240px
+	&-order
+		display: block
+		border: 1px solid #e9e9e9
+		background: $white
+		text-decoration: none
+		cursor: pointer
+		transition: background-color .5s ease
+		margin-bottom: 10px
+		&:last-child
+			margin-bottom: 0
+		&:hover
+			background-color: #f3f3f3
+			.profile-order-bottom-btn
+				background-color: $white
+		&-top
+			border-bottom: 1px solid #e9e9e9
+			padding: 20px 30px 15px
+			display: flex
+			align-items: center
+			justify-content: space-between
+		&-left
+			display: flex
+			margin-right: 30px
+		&-column
+			display: flex
+			flex-direction: column
+			margin-right: 65px
+			&:last-child
+				margin-right: 0
+		&-title
+			color: rgba(27, 47, 62, 0.5)
+			font-family: "Lato-Bold"
+			font-size: 12px
+			text-transform: uppercase
+		&-value
+			font-family: "Lato-Bold"
+			font-size: 14px
+			white-space: nowrap
+			text-transform: uppercase
+			color: #1b2f3e
+			margin-top: 5px
+		.header-basket-label
+			margin-top: -8px
+			flex-shrink: 0
+		&-bottom
+			display: flex
+			justify-content: space-between
+			padding: 30px 30px 17px 30px
+			&-right
+				width: 140px
+				flex-shrink: 0
+				text-align: right
+			&-left
+				width: 450px
+				display: flex
+				flex-wrap: wrap
+			&-img
+				margin-right: 10px
+				max-width: 80px
+				margin-bottom: 10px
+			&-text
+				color: #8c9195
+				font-size: 14px
+				margin-bottom: 20px
+			&-btn
+				width: 100%
+				height: 40px
+				line-height: 40px
+				background: #f3f3f3
+				color: #1b2f3e
+				font-family: "Lato-Black"
+				letter-spacing: normal
+				font-size: 11px
+				padding: 0 10px
+				text-align: center
+				transition: all .5s ease
+				&:hover
+					color: $white
+	&-view
+		&-top
+			display: flex
+			align-items: center
+			justify-content: space-between
+			padding: 15px 0
+			border-bottom: 1px solid #e9e9e9
+			border-top: 1px solid #e9e9e9
+			.header-basket-label
+				margin-top: -3px
+		.order-info-key
+			width: 45%
+		.order-info-value
+			width: 55%
+		&-main
+			margin-top: 25px
+		&-bottom
+			&-row
+				display: flex
+				padding: 28px 0 22px
+				border-bottom: 1px solid #f4f4f4
+				margin-bottom: 30px
+			&-left
+				width: 270px
+				padding-right: 20px
+			&-center
+				width: 230px
+				padding-right: 20px
+			&-right
+				padding-right: 20px
+				width: 200px
+			&-title
+				color: rgba(27, 47, 62, 0.5)
+				font-family: "Lato-Bold"
+				font-size: 12px
+				text-transform: uppercase
+				margin-bottom: 17px
+			&-text
+				color: #1b2f3e
+				font-family: "Lato-Bold"
+				font-size: 14px
+				margin-bottom: 3px
+	&-pass
+		&-input
+			width: 100%
+			height: 38px
+			line-height: 38px
+			border: 1px solid #e4e4e4
+			background-color: #ffffff
+			padding: 0 15px
+			margin-bottom: 10px
+			max-width: 410px
+			outline: none
+			letter-spacing: 0.13px
+			font-size: 13px
+			display: block
+			&_new
+				margin-bottom: 30px
+	&-file
+		display: flex
+		flex-wrap: wrap
+		width: calc(100% + 10px)
+		&-item
+			width: calc(20% - 10px)
+			margin-right: 10px
+			margin-bottom: 10px
+			cursor: pointer
+			position: relative
+		&-popup
+			position: fixed
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+			background-color: rgba(0, 0, 0, 0.78)
+			opacity: 0
+			pointer-events: none
+			padding: 40px 20px
+			z-index: 5
+			transition: opacity .5s ease
+			display: flex
+			align-items: center
+			justify-content: center
+			&.active
+				opacity: 1
+				pointer-events: auto
+			&-img
+				max-height: 100%
+				display: block
+				margin: 0 auto
+			&-close
+				width: 30px
+				height: 30px
+				position: absolute
+				top: 40px
+				right: 40px
+				cursor: pointer
+				background: url(../img/close_popup_white.svg) no-repeat center
+				background-size: 30px 30px
+		&-close
+			width: 20px
+			height: 20px
+			border: 1px solid #e4e4e4
+			background: #ffffff url(../img/close_popup.svg) no-repeat center
+			background-size: 8px 8px
+			border-radius: 50%
+			cursor: pointer
+			position: absolute
+			top: 5px
+			right: 5px
+			cursor: pointer
+			z-index: 2
+	&-edit
+		&-title
+			color: #727679
+			font-family: "Lato-Bold"
+			font-size: 12px
+			text-transform: uppercase
+			margin-bottom: 20px
+		&-row
+			margin-bottom: 40px
+		&-link
+			height: 38px
+			line-height: 38px
+			width: 100%
+			display: flex
+			align-items: center
+			justify-content: space-between
+			max-width: 410px
+			padding: 2px 18px 0 47px
+			text-decoration: none
+			color: $white
+			font-size: 13px
+			transition: background-color .5s ease
+			margin-bottom: 10px
+			&-label
+				text-transform: uppercase
+				letter-spacing: 2px
+			&_vk
+				background: #6383a8 url(../img/vk.svg) no-repeat left 15px center
+				background-size: 18px 11px
+				&:hover
+					background-color: darken(#6383a8, 10%)
+			&_fb
+				background: #3b5998 url(../img/facebook.svg) no-repeat left 15px center
+				background-size: 18px 18px
+				&:hover
+					background-color: darken(#3b5998, 10%)
+.delivery
+	padding: 20px 0 50px
+	&-subtitle
+		letter-spacing: 3px
+	&-description
+		color: #1b2f3e
+		font-size: 16px
+		margin: 40px 0 35px
+	&-item
+		max-width: 900px
+		margin-bottom: 40px
+		&:last-child
+			margin-bottom: 0
+		&-title
+			color: rgba(27, 47, 62, 0.5)
+			font-family: "Lato-Bold"
+			font-size: 12px
+			text-transform: uppercase
+		&-block
+			border: 1px solid #e9e9e9
+			padding: 25px 40px 25px 90px
+			margin: 20px 0 0
+			&_first
+				background: url(../img/sdk.png) no-repeat left 20px top 20px
+			&_second
+				background: url(../img/delivery.svg) no-repeat left 20px top 20px
+				background-size: 38px 40px
+			&_third
+				background: url(../img/cards.svg) no-repeat left 20px top 20px
+				background-size: 40px 36px
+			&_fourth
+				background: url(../img/money.jpg) no-repeat left 20px top 20px
+			&_fifth
+				background: url(../img/qiwi.png) no-repeat left 20px top 20px
+				margin-top: 10px
+		&-subtitle
+			color: #252525
+			font-size: 20px
+			letter-spacing: 0.2px
+	&-list
+		margin-top: 10px
+		&-item
+			color: #5b6268
+			font-size: 14px
+			padding: 6px 0 6px 30px
+			line-height: 18px
+			position: relative
+			&:before
+				position: absolute
+				content: ''
+				width: 4px
+				height: 4px
+				border-radius: 50%
+				background: #1b2f3e
+				left: 0
+				top: 12px
+	&-row
+		display: flex
+		margin-top: 35px
+		&-item
+			width: 100%
+			max-width: 210px
+		&-key
+			color: rgba(27, 47, 62, 0.5)
+			font-family: "Lato-Bold"
+			font-size: 12px
+			text-transform: uppercase
+			margin-bottom: 15px
+		&-value
+			color: #1b2f3e
+			font-family: "Lato-Bold"
+			font-size: 14px
+.payment
+	padding: 20px 0 50px
+	&-text
+		color: #5b6268
+		font-size: 14px
+		line-height: 18px
+		margin-top: 20px
+.back
+	padding: 20px 0 40px
+	&-subtitle
+		letter-spacing: 3px
+	&-row
+		margin-top: 35px
+		&-title
+			color: #252525
+			font-size: 20px
+			letter-spacing: 0.2px
+		&-text
+			color: #5b6268
+			font-size: 14px
+			line-height: 18px
+			margin-top: 15px
+	&-link
+		color: #ec7497
+	&-popup
+		position: fixed
+		width: 100%
+		height: 100vh
+		left: 0
+		top: 0
+		background: rgba(0, 0, 0, 0.78)
+		z-index: 5
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: 65px 20px
+		&-content
+			max-width: 970px
+			background: $white
+			min-height: 765px
+			padding: 40px
+		&-title
+			letter-spacing: 3px
+		&-form
+			display: flex
+			margin-top: 40px
+		&-left
+			width: 470px
+			padding-right: 40px
+			border-right: 1px solid #ececec
+		&-info
+			width: 420px
+			padding-left: 40px
 @import "media" // Всегда в конце

@@ -52,7 +52,9 @@ gulp.task('libs-css', ['sass'], function(){
 });
 gulp.task('libs-js', function(){
   return gulp.src([
-      'app/libs/slick-carousel/slick/slick.min.js'
+      'app/libs/slick-carousel/slick/slick.min.js',
+      'app/libs/smooth-scrollbar/dist/smooth-scrollbar.js',
+      'app/libs/select2/dist/js/select2.min.js'
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())

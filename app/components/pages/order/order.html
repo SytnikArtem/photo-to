@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<title>Title</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">-->
+    <meta name="viewport" content="width=480, maximum-scale=1.0"/>
+	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+	@import "header.html"
+	<section class="order">
+		<div class="container">
+			<div class="order-content">
+				<div class="order-left">
+					<h4 class="order-subtitle subtitle">
+						<span class="subtitle-span">Товары в корзине</span>
+					</h4>
+					<div class="order-list">
+						<div class="order-item">
+							<div class="order-photo">
+								<img src="img/basket.jpg" alt="" class="order-photo-img">
+							</div>
+							<div class="order-info">
+								<h6 class="order-info-title">Толстовка унисекс синяя</h6>
+								<span class="header-basket-label active">С печатью</span>
+								<div class="order-info-table">
+									<div class="order-info-row">
+										<p class="order-info-key">Размер:</p>
+										<p class="order-info-value">XL</p>
+									</div>
+									<div class="order-info-row">
+										<p class="order-info-key">Формат печати:</p>
+										<p class="order-info-value">A4</p>
+									</div>
+									<div class="order-info-row">
+										<p class="order-info-key">Что печатать:</p>
+										<p class="order-info-value">Картинка</p>
+									</div>
+									<div class="order-info-row">
+										<p class="order-info-key">Способ печати:</p>
+										<p class="order-info-value">Прямая печать</p>
+									</div>
+									<div class="order-info-row">
+										<p class="order-info-key">Количество:</p>
+										<p class="order-info-value">1шт.</p>
+									</div>
+									<div class="order-info-row">
+										<p class="order-info-key">Сумма:</p>
+										<p class="order-info-value">1280 руб.</p>
+									</div>
+								</div>
+							</div>
+							<div class="order-item-close"></div>
+						</div>
+						<div class="order-item">
+							<div class="order-photo">
+								<img src="img/basket.jpg" alt="" class="order-photo-img">
+							</div>
+							<div class="order-info">
+								<h6 class="order-info-title">Толстовка унисекс синяя</h6>
+								<span class="header-basket-label">Без печати</span>
+								<div class="order-info-table">
+									<div class="order-info-row">
+										<p class="order-info-key">Размер:</p>
+										<p class="order-info-value">XL</p>
+									</div>
+									<div class="order-info-row">
+										<p class="order-info-key">Количество:</p>
+										<p class="order-info-value">1шт.</p>
+									</div>
+									<div class="order-info-row">
+										<p class="order-info-key">Сумма:</p>
+										<p class="order-info-value">1280 руб.</p>
+									</div>
+								</div>
+							</div>
+							<div class="order-item-close"></div>
+						</div>
+					</div>
+				</div>
+				<div class="order-right">
+					<h4 class="order-subtitle subtitle">
+						<span class="subtitle-span">Оформление заказа</span>
+					</h4>
+					<form action="" class="order-form">
+						<div class="order-form-item">
+							<p class="order-form-title">Адрес доставки:</p>
+							<select class="js-country order-form-select">
+								<option></option>
+								<option>Select A</option>
+								<option>Select B</option>
+								<option>Select C</option>
+								<option>Select D</option>
+								<option>Select D</option>
+								<option>Select D</option>
+								<option>Select D</option>
+							</select>
+							<select class="js-city order-form-select">
+								<option></option>
+								<option>Select A</option>
+								<option>Select B</option>
+								<option>Select C</option>
+								<option>Select D</option>
+							</select>
+						</div>
+						<div class="order-form-item">
+							<p class="order-form-title">способ доставки:</p>
+							<label class="order-form-label">
+								<input type="radio" class="order-form-radio" name="delivery" checked>
+								<span class="order-form-check"></span>
+								<span class="order-form-text">Самовывоз: 0 руб. (ул. Марата, 28)</span>
+							</label>
+							<label class="order-form-label">
+								<input type="radio" class="order-form-radio" name="delivery">
+								<span class="order-form-check"></span>
+								<span class="order-form-text">Самовывоз: 0 руб. (ул. Казанская, 26)</span>
+							</label>
+							<label class="order-form-label">
+								<input type="radio" class="order-form-radio" name="delivery">
+								<span class="order-form-check"></span>
+								<span class="order-form-text">Пункты самовывоза СДЭК: 125 руб. от 3 до 4 дней</span>
+							</label>
+							<label class="order-form-label">
+								<input type="radio" class="order-form-radio" name="delivery">
+								<span class="order-form-check"></span>
+								<span class="order-form-text">Курьерская доставка СДЭК: 265 руб. от 3 до 4 дней</span>
+							</label>
+						</div>
+						<div class="order-form-item">
+							<p class="order-form-title">Личная информация:</p>
+							<input type="text" class="order-form-input" placeholder="Имя" required>
+							<input type="text" class="order-form-input" placeholder="Фамилия" required>
+							<input type="tel" class="order-form-input" placeholder="Телефон" required>
+							<input type="email" class="order-form-input" placeholder="Email">
+						</div>
+						<div class="order-form-item">
+							<div class="order-form-row">
+								<p class="order-form-key">Доставка:</p>
+								<p class="order-form-price">
+									<span class="order-form-price-number">300</span>
+									<span class="order-form-price-currency">руб.</span>
+								</p>
+							</div>
+							<div class="order-form-row">
+								<p class="order-form-key">Общая сумма:</p>
+								<p class="order-form-price">
+									<span class="order-form-price-number">1890</span>
+									<span class="order-form-price-currency">руб.</span>
+								</p>
+							</div>
+							<button type="submit" class="order-form-btn btn">
+								<span class="btn-span">Оформить заказ</span>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	@import "footer.html"
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/libs.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>
