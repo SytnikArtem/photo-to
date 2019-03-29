@@ -15,6 +15,7 @@
 
 <body>
 	@import "header.html"
+	@import "header-fixed.html"
 	<section class="back">
 		<div class="container">
 			<h4 class="back-subtitle subtitle">
@@ -42,7 +43,7 @@
 			<div class="back-row">
 				<p class="back-row-title">Если вы передумали:</p>
 				<ul class="delivery-list">
-					<li class="delivery-list-item">Напишите нам на электронный адрес: <a href="" class="back-link back-link_form">dawson.leannon@prohaska.info</a></li>
+					<li class="delivery-list-item">Напишите нам на электронный адрес: <a href="mailto:dawson.leannon@prohaska.info" class="back-link">dawson.leannon@prohaska.info</a></li>
 					<li class="delivery-list-item">Мы свяжемся с вами и вернем деньги.</li>
 					<li class="delivery-list-item">Обращения принимаются в течение 7 дней с момента получения заказа.</li>
 				</ul>
@@ -82,10 +83,60 @@
 						от верхнего шва горловины до низа изделия), и фото
 						ярлыка изделия.</p>
 					<p class="back-popup-label">Фотографии не соответсвия</p>
+                    <label class="item-form-label item-file">
+                        <input type="file" class="item-form-input" name="type">
+                        <span class="item-file-span">
+                            <span class="item-file-span-title">Выбрать файл</span>
+                            <span class="item-file-span-text"></span>
+                            <span class="item-file-span-close"></span>
+                        </span>
+                    </label>
+                    <div class="back-popup-files">
+                        <div class="back-popup-files-item">
+                            <img src="img/file1.jpg" alt="" class="back-popup-files-img">
+                            <div class="back-popup-files-close"></div>
+                        </div>
+                        <div class="back-popup-files-item">
+                            <img src="img/file1.jpg" alt="" class="back-popup-files-img">
+                            <div class="back-popup-files-close"></div>
+                        </div>
+                        <div class="back-popup-files-item">
+                            <img src="img/file1.jpg" alt="" class="back-popup-files-img">
+                            <div class="back-popup-files-close"></div>
+                        </div>
+                        <div class="back-popup-files-item">
+                            <img src="img/file1.jpg" alt="" class="back-popup-files-img">
+                            <div class="back-popup-files-close"></div>
+                        </div>
+                        <div class="back-popup-files-item">
+                            <img src="img/file1.jpg" alt="" class="back-popup-files-img">
+                            <div class="back-popup-files-close"></div>
+                        </div>
+                        <div class="back-popup-files-item">
+                            <img src="img/file1.jpg" alt="" class="back-popup-files-img">
+                            <div class="back-popup-files-close"></div>
+                        </div>
+                        <div class="back-popup-files-item">
+                            <img src="img/file1.jpg" alt="" class="back-popup-files-img">
+                            <div class="back-popup-files-close"></div>
+                        </div>
+                    </div>
 				</div>
 			</form>
 		</div>
+        <div class="back-popup-close"></div>
 	</div>
+    <div class="thank-popup">
+		<div class="thank-popup-overlay"></div>
+        <div class="thank-popup-main">
+            <img src="img/done_dialog.svg" alt="" class="thank-popup-img">
+            <h4 class="thank-popup-subtitle subtitle">Спасибо</h4>
+            <p class="thank-popup-text">Сообщение отправленно, Lorem ipsum dolor sit amet,
+                consectetuer adipiscing elit. Aenean commodo
+                ligula eget dolor. </p>
+        </div>
+        <div class="thank-popup-close"></div>
+    </div>
 	@import "footer.html"
 
 	<script src="js/jquery.min.js"></script>

@@ -122,7 +122,7 @@ img
 	color: #1b2f3e
 	font-family: "avantgardegothicc"
 	font-size: 30px
-	line-height: 25.9px
+	//line-height: 25.9px
 	text-transform: uppercase
 	letter-spacing: 5.98px
 
@@ -143,6 +143,7 @@ img
 		opacity: 0
 		pointer-events: none
 		transition: opacity .5s ease
+		z-index: 3
 		&-list
 			box-shadow: 0 14px 60px rgba(0, 0, 0, 0.16)
 			background-color: $white
@@ -154,6 +155,24 @@ img
 			text-transform: uppercase
 			text-decoration: none
 			white-space: nowrap
+			position: relative
+			z-index: 1
+			transition: color .3s ease
+			&:before
+				position: absolute
+				width: 0
+				height: calc(100% + 4px)
+				content: ''
+				left: -2px
+				top: -2px
+				background: #eb678e
+				z-index: -1
+				transition: width .3s ease
+			&:hover, &active
+				color: $white
+				&:before
+					width: calc(100% + 4px)
+
 		&-item
 			margin-bottom: 13px
 			&:last-child
@@ -202,16 +221,47 @@ img
 			font-family: "Lato-Bold"
 			text-transform: uppercase
 			text-decoration: none
+			line-height: 1
+			position: relative
+			transition: all .3s ease
+			rect
+				transition: fill .3s ease
+			&:before
+				position: absolute
+				width: 0
+				height: calc(100% + 4px)
+				background: #000000
+				content: ''
+				left: -2px
+				top: -3px
+				z-index: -1
+				transition: width .3s ease
+			&.active
+				&:before
+					width: calc(100% + 4px)
+				color: $white
+				rect
+					fill: #ffffff
 		&-item
 			margin-right: 40px
 			position: relative
 			display: flex
 			justify-content: center
 			align-items: center
+			&:hover
+				.header-nav-link:before
+					width: calc(100% + 4px)
+				.header-nav-link
+					color: $white
+				rect
+					fill: #ffffff
+			&:last-child
+				margin-right: 0
 			svg
 				width: 8px
 				height: 4px
-				margin-top: -2px
+				position: relative
+				top: -2px
 				margin-left: 2px
 			&:hover
 				.header-drop
@@ -228,6 +278,8 @@ img
 			font-size: 13px
 			position: relative
 			text-decoration: none
+			&:hover:before
+				opacity: 0
 			&:before
 				position: absolute
 				width: 100%
@@ -236,6 +288,7 @@ img
 				left: 0
 				top: 100%
 				content: ''
+				transition: opacity .3s ease
 			&_phone
 				font-family: "Lato-Bold"
 				&:before
@@ -251,11 +304,30 @@ img
 			font-size: 13px
 			font-family: "Lato-Bold"
 			text-decoration: none
+			position: relative
+			transition: color .3s ease
+			&:before
+				position: absolute
+				width: 0
+				height: calc(100% + 4px)
+				background: #000000
+				content: ''
+				left: -2px
+				top: -3px
+				z-index: -1
+				transition: width .3s ease
+			&:hover, &.active
+				color: $white
+				&:before
+					width: calc(100% + 4px)
 			&_basket
 				display: flex
 				align-items: center
 				justify-content: flex-end
 				margin-left: 60px
+				&:hover, &.active
+					&:before
+						width: calc(100% - 22px)
 		&-block
 			position: relative
 		&-svg
@@ -381,17 +453,18 @@ img
 			text-transform: uppercase
 			letter-spacing: 7px
 			font-size: 72px
-			line-height: 0.98
+			line-height: 1.1
 			margin-bottom: 55px
 			&-span
 				display: block
+				margin-top: -8px
 			&_fourth
 				margin-bottom: 40px
 
 		&-overlay
 			position: absolute
 			right: 0
-			top: 0
+			bottom: 0
 		&-item
 			padding: 235px 0 285px
 			position: relative
@@ -432,6 +505,9 @@ img
 			.second-item-content
 				opacity: 1
 				pointer-events: auto
+			.second-item-title, .second-item-text, .second-item-price, .second-item-btn
+				transform: translateY(0)
+				opacity: 1
 		&-content
 			position: absolute
 			width: 100%
@@ -445,28 +521,35 @@ img
 			align-items: flex-start
 			opacity: 0
 			pointer-events: none
-			transition: opacity .5s ease
 		&-img
 			max-width: none
-			//transform: translateX(15%)
 			transition: transform .5s ease
 		&-title
 			color: $white
-			ont-family: "avantgardegothicc"
+			font-family: "avantgardegothicc"
 			font-size: 30px
 			text-transform: uppercase
 			letter-spacing: 5.98px
+			transform: translateY(100%)
+			opacity: 0
+			transition: all .5s ease
 		&-text
 			color: rgba(0, 0, 0, 0.5)
 			font-family: "Lato-Bold"
 			font-size: 12px
 			text-transform: uppercase
 			margin-bottom: 10px
+			transform: translateY(100%)
+			opacity: 0
+			transition: all .5s ease
 		&-row
 			margin-top: 20px
 		&-price
 			display: flex
 			align-items: flex-start
+			transform: translateY(100%)
+			opacity: 0
+			transition: all .5s ease
 			&-number
 				color: $white
 				font-family: "Lato-Semibold"
@@ -480,6 +563,9 @@ img
 			width: 100%
 			text-align: center
 			margin-top: 40px
+			transform: translateY(100%)
+			opacity: 0
+			transition: all .5s ease
 		&-info
 			width: 100%
 .third
@@ -508,6 +594,7 @@ img
 			.third-item-info
 				opacity: 1
 				transform: translate3d(0,0,0) scale(1)
+				pointer-events: auto
 			.third-item-img
 				transform: scale(1)
 		&-info
@@ -524,6 +611,7 @@ img
 			justify-content: space-between
 			transform: translate3d(0,20px,0) scale(1.1)
 			opacity: 0
+			pointer-events: none
 			transition: opacity 0.35s, transform 0.35s
 		&-title
 			color: $white
@@ -573,6 +661,8 @@ img
 			width: 100%
 			height: 100%
 			object-fit: cover
+			margin: 0 auto
+			position: absolute
 .fourth
 	margin: 0 50px
 	background: url(../img/fourth-bg.jpg) no-repeat top center
@@ -716,12 +806,13 @@ img
 		.second-item-btn
 			opacity: 0
 			pointer-events: none
-			transition: opacity .5s ease
+			transition: all .5s ease
 		&:hover
 			background: #f6f6f6
 			.second-item-btn
 				opacity: 1
 				pointer-events: auto
+				transform: translateY(0)
 		&-content
 			position: absolute
 			top: 0
@@ -1168,6 +1259,7 @@ img
 		width: 900px
 	&-right
 		width: 200px
+		padding-top: 60px
 	&-table
 		display: flex
 		flex-direction: column
@@ -1247,7 +1339,6 @@ img
 				text-transform: uppercase
 				margin-top: -2px
 	&-list
-		margin-top: 60px
 		&-link
 			color: #1b2f3e
 			font-family: "Lato-Bold"
@@ -1313,10 +1404,16 @@ img
 			width: 100%
 			height: 100%
 			object-fit: cover
+			transform: scale(1.15)
+			transition: transform 0.35s
+			margin: 0 auto
 		&-block
 			height: 17.5vw
 			&:first-child
 				height: 35vw
+			&:hover
+				.services-gallery-img
+					transform: scale(1)
 		&-item
 			display: flex!important
 			flex-direction: column
@@ -1679,6 +1776,7 @@ img
 	width: 100%!important
 	outline: none
 	margin-bottom: 5px
+	z-index: 5
 	&:last-child
 		margin-bottom: 0
 .select2-container .select2-selection--single
@@ -2408,6 +2506,15 @@ img
 		align-items: center
 		justify-content: center
 		padding: 65px 20px
+		opacity: 0
+		pointer-events: none
+		transition: opacity .5s ease
+		overflow: auto
+		&.active
+			opacity: 1
+			pointer-events: auto
+		&.flex-start
+			align-items: flex-start
 		&-content
 			max-width: 970px
 			background: $white
@@ -2425,4 +2532,215 @@ img
 		&-info
 			width: 420px
 			padding-left: 40px
+		&-input
+			width: 100%
+			height: 46px
+			line-height: 46px
+			border: 1px solid #e4e4e4
+			outline: none
+			color: #303030
+			font-family: "Lato-Bold"
+			font-size: 14px
+			letter-spacing: 0.14px
+			padding: 0 25px
+			margin-bottom: 10px
+		.select2-container--default .select2-selection--single .select2-selection__rendered
+			line-height: 46px
+			padding: 0 25px
+			color: #60666a
+			font-family: "Lato-Bold"
+		.select2-container .select2-selection--single
+			border: 1px solid #e4e4e4
+		&-textarea
+			width: 100%
+			height: 265px
+			outline: none
+			border: 1px solid #e4e4e4
+			resize: none
+			margin: 5px 0 30px
+			color: #60666a
+			font-family: "Lato"
+			font-size: 14px
+			letter-spacing: 0.14px
+			padding: 15px 25px
+		&-img
+			width: 145px
+			margin-bottom: 35px
+		&-text
+			color: #8c9195
+			font-size: 14px
+			line-height: 20px
+		&-label
+			color: rgba(0, 0, 0, 0.5)
+			font-family: "Lato-Bold"
+			font-size: 12px
+			text-transform: uppercase
+			margin: 25px 0 20px
+		&-files
+			display: flex
+			width: calc(100% + 8px)
+			flex-wrap: wrap
+			margin-top: 15px
+			&-item
+				width: calc(25% - 8px)
+				margin-top: 8px
+				margin-right: 8px
+				position: relative
+			&-close
+				width: 20px
+				height: 20px
+				border: 1px solid #e4e4e4
+				background: #ffffff url(../img/close_popup.svg) no-repeat center
+				background-size: 8px 8px
+				border-radius: 50%
+				cursor: pointer
+				position: absolute
+				top: 5px
+				right: 5px
+				cursor: pointer
+				z-index: 2
+		&-close
+			width: 30px
+			height: 30px
+			position: fixed
+			top: 40px
+			right: 40px
+			background: url(../img/close_popup_white.svg) no-repeat center
+			background-size: 30px 30px
+			cursor: pointer
+.thank
+	&-popup
+		position: fixed
+		z-index: 5
+		left: 0
+		top: 0
+		width: 100%
+		height: 100vh
+		display: flex
+		align-items: center
+		justify-content: center
+		opacity: 0
+		pointer-events: none
+		transition: opacity .5s ease
+		&-overlay
+			width: 5vw
+			height: 5vw
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%)
+			background: $white
+			border-radius: 50%
+			position: absolute
+			transition: all 2s ease
+			z-index: -1
+		&.active
+			.thank-popup-overlay
+				width: 200vw
+				height: 200vw
+		&.active
+			opacity: 1
+			pointer-events: auto
+		&-main
+			display: flex
+			flex-direction: column
+			align-items: center
+			opacity: 0
+			transform: translateY(50px)
+			transition: all 1s ease
+			&.active
+				opacity: 1
+				transform: translateY(0)
+		&-img
+			width: 50px
+			height: 50px
+		&-subtitle
+			text-transform: none
+			margin-top: 30px
+		&-text
+			color: #8c9195
+			font-size: 14px
+			line-height: 20px
+			max-width: 340px
+			text-align: center
+			margin-top: 20px
+		&-close
+			width: 30px
+			height: 30px
+			position: absolute
+			top: 40px
+			right: 40px
+			background: url(../img/close_popup.svg) no-repeat center
+			background-size: 30px 30px
+			cursor: pointer
+.header
+	&-fixed
+		position: fixed
+		left: 10px
+		width: calc(100% - 20px)
+		top: 10px
+		z-index: 4
+		background: $white
+		padding: 15px 30px 15px 15px
+		box-shadow: 0 8px 60px rgba(0, 0, 0, 0.1)
+		transform: translateY(-120%)
+		opacity: 0
+		transition: all .5s ease
+		&.active
+			transform: translateY(0)
+			opacity: 1
+		&-main
+			display: flex
+			align-items: center
+			justify-content: space-between
+		&-left
+			width: 275px
+		&-logo
+			width: 50px
+			height: 50px
+			border: 1px solid #000000
+			border-radius: 50%
+			display: block
+.span-transform, .subtitle-span
+	display: inline-block
+.span-overflow
+	overflow: hidden
+	display: block
+.third-item-overlay, .fifth-left-overlay
+	width: 100%
+	height: 100%
+	margin: 0 auto
+	overflow: hidden
+.fifth-left
+	overflow: hidden
+.catalog-item
+	.second-item-price
+		transform: translateY(0)
+		opacity: 1
+.services-gallery-block
+	overflow: hidden
+.header-right-link-circle
+	opacity: 0
+	width: 8px
+	height: 8px
+	border: 2px solid #ffffff
+	background-color: #eb678e
+	border-radius: 50%
+	transition: opacity .5s ease
+	position: absolute
+	top: 0
+	right: -2px
+	&.active
+		opacity: 1
+.price-table-top
+	background: $white
+	position: relative
+	z-index: 3
+.price-table-top
+	position: absolute
+	width: 100%
+	left: 0
+	top: 0
+.price-table
+	position: relative
+	padding-top: 37px
 @import "media" // Всегда в конце

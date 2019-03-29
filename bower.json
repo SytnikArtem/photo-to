@@ -20,6 +20,8 @@
     "jquery": "^3.3.1",
     "slick-carousel": "^1.8.1",
     "smooth-scrollbar": "^8.3.1",
-    "select2": "^4.0.5"
+    "select2": "^4.0.5",
+    "scrollmagic": "^2.0.6",
+    "gsap": "^2.1.2"
   }
 }

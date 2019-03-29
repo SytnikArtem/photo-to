@@ -15,18 +15,24 @@
 
 <body>
 	@import "header.html"
+	@import "header-fixed.html"
 	<section class="view">
 		<div class="container">
 			<div class="view-content">
-				<div class="view-left">
+				<div class="view-left gsapFadeTop2" data-height="30" data-delay="0.4">
 					<img src="img/view.png" alt="" class="view-img">
 				</div>
 				<div class="view-right">
 					<p class="view-order">Заказ №8899</p>
 					<h4 class="view-subtitle subtitle">
-						<span class="subtitle-span">Толстовка унисекс синяя</span>
+						<span class="fifth-right-span span-overflow">
+							<span class="subtitle-span gsapFadeTop2" data-height="30" data-delay="0.1">Толстовка унисекс</span>
+						</span>
+						<span class="fifth-right-span span-overflow">
+							<span class="subtitle-span gsapFadeTop2" data-height="30" data-delay="0.2">синяя</span>
+						</span>
 					</h4>
-					<div class="order-info-table view-table">
+					<div class="order-info-table view-table gsapFade" data-delay="0.1">
 						<div class="order-info-row">
 							<p class="order-info-key">Размер:</p>
 							<p class="order-info-value">XL</p>
@@ -52,7 +58,7 @@
 							<p class="order-info-value">1280 руб.</p>
 						</div>
 					</div>
-					<div class="view-total">
+					<div class="view-total gsapFade" data-delay="0.1">
 						<div class="order-info-row">
 							<p class="order-info-key order-info-key_total">Доставка:</p>
 							<p class="order-info-valu order-info-value_total">
@@ -66,7 +72,7 @@
 							</p>
 						</div>
 					</div>
-					<a href="" class="view-btn btn">
+					<a href="" class="view-btn btn gsapFade" data-delay="0.1">
 						<span class="btn-span">Оплатить заказ</span>
 					</a>
 				</div>

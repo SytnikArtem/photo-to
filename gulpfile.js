@@ -54,7 +54,11 @@ gulp.task('libs-js', function(){
   return gulp.src([
       'app/libs/slick-carousel/slick/slick.min.js',
       'app/libs/smooth-scrollbar/dist/smooth-scrollbar.js',
-      'app/libs/select2/dist/js/select2.min.js'
+      'app/libs/select2/dist/js/select2.min.js',
+      'app/libs/TweenMax.min.js',
+      'app/libs/ScrollMagic.min.js',
+      'app/libs/animation.gsap.js',
+      'app/libs/addIndicators.min.js',
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())

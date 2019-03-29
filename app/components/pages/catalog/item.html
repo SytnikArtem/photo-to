@@ -15,10 +15,11 @@
 
 <body>
 	@import "header.html"
+	@import "header-fixed.html"
 	<section class="item">
 		<div class="container">
 			<div class="item-main">
-				<div class="item-left">
+				<div class="item-left gsapFadeTop2" data-height="30" data-delay="0.1">
 					<div class="item-slider">
 						<div class="item-slider-item">
 							<img src="img/slider1.png" alt="" class="item-slider-img">
@@ -65,15 +66,22 @@
 					</div>
 				</div>
 				<div class="item-right">
-					<div class="item-tabs">
+					<div class="item-tabs gsapFade" data-delay="0.1">
 						<a href="" class="item-tabs-link active">С печатью</a>
 						<a href="" class="item-tabs-link">Без печати</a>
 					</div>
-					<h4 class="item-subtitle subtitle">Толстовка унисекс синяя</h4>
+					<h4 class="item-subtitle subtitle">
+						<span class="subtitle-span span-overflow">
+							<span class="span-transform gsapFadeTop2" data-height="30" data-delay="0.1">Толстовка унисекс</span>
+						</span>
+						<span class="subtitle-span span-overflow">
+							<span class="span-transform gsapFadeTop2" data-height="30" data-delay="0.2">синяя</span>
+						</span>
+					</h4>
 					<form action="" class="item-form">
 						<div class="item-form-row">
-							<p class="item-form-title">Доступные  цвета: </p>
-							<div class="item-form-flex">
+							<p class="item-form-title gsapFade" data-delay="0.1">Доступные цвета:</p>
+							<div class="item-form-flex gsapFade" data-delay="0.1">
 								<label class="item-form-label item-color">
 									<input type="radio" class="item-form-input" name="color">
 									<span class="item-color-span item-color-span_first"></span>
@@ -141,8 +149,8 @@
 							</div>
 						</div>
 						<div class="item-form-row">
-							<p class="item-form-title">Доступные размеры: <a href="" class="item-form-link">Таблица размеров</a></p>
-							<div class="item-form-flex">
+							<p class="item-form-title gsapFade" data-delay="0.1">Доступные размеры: <a href="" class="item-form-link">Таблица размеров</a></p>
+							<div class="item-form-flex gsapFade" data-delay="0.1">
 								<label class="item-form-label item-size">
 									<input type="radio" class="item-form-input" name="size">
 									<span class="item-size-span">xs</span>
@@ -174,8 +182,8 @@
 							</div>
 						</div>
 						<div class="item-form-row item-form-row_hide">
-							<p class="item-form-title">Формат печати:</p>
-							<div class="item-form-flex">
+							<p class="item-form-title gsapFade" data-delay="0.1">Формат печати:</p>
+							<div class="item-form-flex gsapFade" data-delay="0.1">
 								<label class="item-form-label item-size">
 									<input type="radio" class="item-form-input" name="format">
 									<span class="item-size-span">a6</span>
@@ -199,8 +207,8 @@
 							</div>
 						</div>
 						<div class="item-form-row item-form-row_hide">
-							<p class="item-form-title">Что печатать?</p>
-							<div class="item-form-flex">
+							<p class="item-form-title gsapFade" data-delay="0.1">Что печатать?</p>
+							<div class="item-form-flex gsapFade" data-delay="0.1">
 								<label class="item-form-label item-type">
 									<input type="radio" class="item-form-input" name="type">
 									<span class="item-type-span">
@@ -360,8 +368,8 @@
 							</div>
 						</div>
 						<div class="item-form-row item-form-row_hide">
-							<p class="item-form-title">способ печати:</p>
-							<div class="item-form-flex">
+							<p class="item-form-title gsapFade" data-delay="0.1">способ печати:</p>
+							<div class="item-form-flex gsapFade" data-delay="0.1">
 								<label class="item-form-label item-method">
 									<span class="item-method-label item-method-label_first">Самый дешевый</span>
 									<input type="radio" class="item-form-input" name="type">
@@ -389,20 +397,18 @@
 							</div>
 						</div>
 						<div class="item-form-row item-form-row_hide">
-							<p class="item-form-title">Загрузить файл:</p>
-							<div class="item-form-flex">
-								<label class="item-form-label item-file">
-									<input type="file" class="item-form-input" name="type">
-									<span class="item-file-span">
-										<span class="item-file-span-title">Выбрать файл</span>
-										<span class="item-file-span-text"></span>
-										<span class="item-file-span-close"></span>
-									</span>
-								</label>
-							</div>
+							<p class="item-form-title gsapFade" data-delay="0.1">Загрузить файл:</p>
+							<label class="item-form-label item-file gsapFade" data-delay="0.1">
+								<input type="file" class="item-form-input" name="type">
+								<span class="item-file-span">
+									<span class="item-file-span-title">Выбрать файл</span>
+									<span class="item-file-span-text"></span>
+									<span class="item-file-span-close"></span>
+								</span>
+							</label>
 						</div>
 						<div class="item-form-row">
-							<div class="item-form-flex item-form-flex_last">
+							<div class="item-form-flex item-form-flex_last gsapFade" data-delay="0.1">
 								<div class="item-form-block">
 									<div class="item-number">
 										<input type="text" class="item-number-input" value="1">
@@ -432,10 +438,10 @@
 				</div>
 			</div>
 			<div class="item-table">
-				<h4 class="item-table-subtitle subtitle">
-					<span class="subtitle-span">Таблица размеров</span>
+				<h4 class="item-table-subtitle subtitle span-overflow">
+					<span class="span-transform gsapFadeTop2" data-height="30" data-delay="0.1">Таблица размеров</span>
 				</h4>
-				<div class="item-table-flex">
+				<div class="item-table-flex gsapFade" data-delay="0.1">
 					<div class="item-table-left">
 						<div class="item-table-row">
 							<p class="item-table-title">Европейские размеры</p>
