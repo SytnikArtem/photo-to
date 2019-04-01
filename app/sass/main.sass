@@ -428,10 +428,11 @@ img
 	&-slider
 		.slick-dots
 			bottom: 160px
-			max-width: 1170px
+			max-width: 1230px
 			left: 50%
 			transform: translateX(-50%)
 			text-align: left
+			padding: 0 30px
 		.slick-dots li button:before
 			width: 8px
 			height: 8px
@@ -465,6 +466,10 @@ img
 			position: absolute
 			right: 0
 			bottom: 0
+			display: flex
+			align-items: flex-end
+			justify-content: flex-end
+			z-index: -1
 		&-item
 			padding: 235px 0 285px
 			position: relative
@@ -665,9 +670,18 @@ img
 			position: absolute
 .fourth
 	margin: 0 50px
-	background: url(../img/fourth-bg.jpg) no-repeat top center
-	background-size: cover
+	position: relative
 	padding: 100px 0
+	&-overlay
+		width: 100%
+		height: 100%
+		position: absolute
+		left: 0
+		top: 0
+		background: url(../img/fourth-bg.jpg) no-repeat top center
+		background-size: cover
+		z-index: -1
+
 	&-text
 		max-width: 500px
 		color: $white
@@ -678,7 +692,7 @@ img
 		&_services
 			margin-top: 185px
 .fifth
-	margin: 0 50px
+	//margin: 0 50px
 	padding: 60px 0
 	overflow: hidden
 	&-row
@@ -701,6 +715,7 @@ img
 			flex-direction: row-reverse
 			.fifth-left
 				margin-right: 0
+				margin-left: 30px
 
 	&-left
 		width: 670px
@@ -1269,7 +1284,6 @@ img
 			align-items: center
 			justify-content: flex-start
 			padding: 11px 0
-			border-bottom: 1px solid #e4e4e4
 		&-subtop
 			display: flex
 			align-items: center
@@ -2420,6 +2434,7 @@ img
 			border: 1px solid #e9e9e9
 			padding: 25px 40px 25px 90px
 			margin: 20px 0 0
+			display: block
 			&_first
 				background: url(../img/sdk.png) no-repeat left 20px top 20px
 			&_second
@@ -2735,12 +2750,119 @@ img
 	background: $white
 	position: relative
 	z-index: 3
-.price-table-top
+.price-table-fixed
 	position: absolute
 	width: 100%
-	left: 0
+	left: 0!important
 	top: 0
+	border-bottom: 1px solid #e4e4e4
+	z-index: 2
+	//transform: translateX(-50%)
 .price-table
 	position: relative
 	padding-top: 37px
+.price-table-top
+	max-width: 1170px
+	margin: 0 auto
+.delivery-item-radio
+	width: 0
+	height: 0
+	overflow: hidden
+	opacity: 0
+	position: absolute
+	&:checked ~ .delivery-item-overlay
+		opacity: 1
+.delivery-item-block
+	position: relative
+	cursor: pointer
+.delivery-item-overlay
+	position: absolute
+	opacity: 0
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	background: rgba(233, 233, 233, 0.51)
+	z-index: -1
+.header-burger
+	width: 19px
+	height: 16px
+	position: relative
+	cursor: pointer
+	flex-shrink: 0
+	display: none
+	&-span
+		position: absolute
+		width: 100%
+		height: 2px
+		background: $white
+		left: 0
+		&_first
+			top: 0
+		&_third
+			bottom: 0
+		&_second
+			top: 50%
+			transform: translateY(-50%)
+.footer-contacts_mobile
+	display: none
+.menu
+	position: fixed
+	width: 100%
+	z-index: 6
+	height: 100vh
+	left: 0
+	top: 0
+	overflow: auto
+	transition: transform .5s ease
+	transform: translateX(-150%)
+	&.active
+		transform: translateX(0)
+	&-content
+		padding: 30px
+		background: #ffffff
+		margin-right: 25px
+		min-height: 100%
+		display: flex
+		justify-content: space-between
+		flex-direction: column
+		box-shadow: 5px 30px 40px rgba(0, 0, 0, 0.1)
+	&-top
+		border-bottom: 1px solid rgba(180, 180, 180, 0.2)
+		&-title
+			color: #1b2f3e
+			font-family: "Lato-Bold"
+			font-size: 12px
+			text-transform: uppercase
+			padding-right: 20px
+			position: relative
+			padding-bottom: 20px
+			display: block
+			text-decoration: none
+			&:before
+				position: absolute
+				width: 6px
+				height: 8px
+				background: url(../img/arrow-back.svg) no-repeat center
+				background-size: 6px 8px
+				content: ''
+				right: 0
+				top: 50%
+				transform: translateY(-50%) rotate(180deg)
+	&-submenu
+		border-top: 1px solid rgba(180, 180, 180, 0.2)
+		display: flex
+		flex-direction: column
+		padding-top: 15px
+		margin-top: 15px
+.header-basket-top
+	display: flex
+	padding: 30px 30px 20px 30px
+	border-bottom: 1px solid rgba(180, 180, 180, 0.2)
+	color: #1b2f3e
+	font-family: "Lato-Bold"
+	font-size: 13px
+	display: none
+	&-title
+		margin-right: 10px
 @import "media" // Всегда в конце

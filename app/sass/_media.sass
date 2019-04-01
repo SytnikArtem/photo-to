@@ -3,5 +3,358 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1920px)
-  ///
+@media only screen and (max-width : 1439px)
+  .second-item
+    height: 400px
+  .second-item-img
+    height: 100%
+  .first-slider-img
+    width: 90%
+@media only screen and (max-width : 1230px)
+  .header
+    padding: 30px 30px
+  .second-content
+    padding: 0 30px
+  .fourth
+    margin: 0 30px
+  .first-slider-title
+    font-size: 60px
+  .first-slider-item
+    padding: 220px 0
+  .second-item-content
+    padding: 20px
+  .third-item
+    width: calc(33.33% - 20px)
+    margin-right: 30px
+    height: 27.5vw
+    &:nth-child(3n + 3)
+      margin-right: 0
+  .third-item-info
+    padding: 20px
+  .third-item-title
+    font-size: 20px
+  .third-item-row
+    padding: 0
+  .third-item-block:last-child
+    padding-right: 0
+    padding-left: 15px
+  .fifth-row
+    padding: 20px 0
+  .header-right-link_basket
+    margin-left: 15px
+  .header-fixed-left
+    width: 230px
+  .header-nav-item
+    margin-right: 30px
+  .first-slider-img
+    margin-right: -5%
+@media only screen and (max-width : 1023px)
+  .header-nav
+    display: none
+  .header-bottom, .header-right-link_login
+    display: none
+  .header-top
+    border-bottom: none
+  .header-right-link_basket
+    font-size: 0
+  .header-right-svg
+    margin-left: 0
+  .header-logo
+    width: 60px
+    height: 60px
+    margin: 0
+  .header-burger
+    display: block
+  .header-top
+    padding: 0
+  .header-flex
+    justify-content: space-between
+  .header-main
+    width: auto
+  .header-right-link_basket
+    margin-right: 0
+    position: relative
+    z-index: 6
+    &.active rect
+      fill: #1b2f3e
+  .header
+    padding: 20px 30px
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+  .first-slider-item
+    padding: 150px 0
+  .first-slider-title
+    font-size: 42px
+  .second-item
+    width: 50%
+  .third
+    padding: 60px 0 50px
+  .third-main
+    margin-top: 50px
+  .third-item
+    width: calc(50% - 15px)
+    height: auto
+  .third-item:nth-child(3n + 3)
+    margin-right: 30px
+  .third-item:nth-child(2n + 2)
+    margin-right: 0
+  .first-slider-img
+    width: 700px
+  .second-item-content
+    opacity: 1
+  .second-item-title, .second-item-text, .second-item-price, .second-item-btn
+    opacity: 1
+    transform: none
+  .second-item-img
+    transform: translateX(15%)
+  .third-item-img
+    transform: none
+    position: static
+  .third-item-info
+    position: static
+    transform: none
+    opacity: 1
+    pointer-events: auto
+  .third-item-overlay, .fifth-left-overlay
+    height: 30vw
+  .third-item-info
+    height: auto
+    width: 100%
+    background: #1b2f3e
+  .third-item-text
+    color: rgba(255, 255, 255, 0.5)
+  .third-item-row
+    margin: 20px 0
+    justify-content: center
+  .third-item-block
+    padding-right: 30px
+    width: auto
+  .third-item-block:last-child
+    padding-left: 30px
+  .header-fixed
+    width: 100%
+    top: 0
+    left: 0
+  .fifth-right
+    padding: 0
+  .fifth-right, .fifth-left
+    width: 50%
+    height: auto
+  .fifth-row
+    align-items: flex-start
+  .footer-block:first-child
+    padding-left: 0
+  .footer-block
+    padding-right: 20px
+    padding-left: 0
+  .header-basket-total
+    display: none
+  .header-basket-bottom
+    padding: 0
+  .header-basket-btn
+    width: 100%
+  .header-basket-label
+    display: none
+  .header-basket-img
+    width: 50px
+    height: 50px
+  .header-basket
+    width: calc(100% - 25px)
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+  .header-basket-block
+    margin-left: 10px
+  .header-basket-price
+    margin-top: 0
+  .header-basket-item
+    align-items: center
+  .header-basket-close
+    top: 15px
+    right: 20px
+  .header-basket-top
+    display: flex
+  .header-basket
+    position: fixed
+    top: 0
+    right: 0
+    opacity: 1
+    transform: translateX(150%)
+    transition: all .5s ease
+    pointer-events: auto
+    &.active
+      transform: translateX(0)
+  .header-basket-main
+    height: calc(100vh - 113px)
+    padding-bottom: 46px
+  .header-basket-bottom
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+@media only screen and (max-width : 767px)
+  .header-logo
+    width: 40px
+    height: 40px
+  .first-slider-title
+    text-align: center
+    letter-spacing: 4.2px
+    line-height: 1.05
+    margin-bottom: 15px
+  .first-slider-overlay
+    position: static
+  .first-slider-item .container
+    text-align: center
+  .first-slider-item
+    padding: 110px 0 0
+  .first-slider-img
+    width: 570px
+    max-width: 570px
+    margin: 0
+  .first-slider-overlay
+    justify-content: center
+  .second-item
+    width: 100%
+  .second-item-info
+    display: none
+  .second-item-content
+    padding: 25px
+    align-items: center
+  .second-item-img
+    transform: none
+    width: 800px
+    max-width: 800px
+    height: auto
+  .second-item:hover .second-item-img
+    transform: none
+  .second-item
+    align-items: flex-start
+    height: 320px
+  .second-content
+    padding: 0 25px
+  .header
+    padding: 20px 25px
+  .third
+    padding: 35px 0 10px
+  .third-description
+    margin-top: 15px
+  .third-main
+    margin-top: 25px
+  .container
+    padding: 0 25px
+  .third-item
+    width: 100%
+    margin-right: 0!important
+    margin-bottom: 20px
+  .third-item-overlay, .fifth-left-overlay
+    height: 47vw
+    max-height: 300px
+  .third-item-info
+    padding: 30px 20px
+  .third-item-title
+    font-size: 24px
+  .third-item-text
+    margin-bottom: 3px
+  .third-item-row
+    margin: 15px 0 0
+  .third-item-link
+    display: none
+  .fourth
+    margin: 0
+    padding: 0 0 20px
+    text-align: center
+  .fourth-overlay
+    width: 100vw
+    height: 64vw
+    position: relative
+    margin-bottom: 30px
+    background-position: top left 75%
+  .first-slider-title_fourth
+    color: #1b2f3e
+  .fourth-text
+    color: #8c9195
+    font-size: 15px
+    margin: 0 auto
+  .fourth-btn
+    margin-top: 20px
+  .fifth-row_custom:before
+    display: none
+  .fifth-row
+    flex-direction: column
+    padding: 15px 0
+  .fifth-right, .fifth-left
+    width: 100%
+  .fifth-left
+    margin: 0 0 15px 0
+  .third-item-overlay, .fifth-left-overlay
+    height: 55vw
+    max-height: 400px
+  .fifth-right
+    text-align: center
+  .fifth-right-title
+    margin-bottom: 10px
+  .fifth-btn
+    margin: 0 auto
+  .fifth-row_reverse .fifth-left
+    margin-left: 0
+  .fifth
+    padding: 0 0 25px
+  .footer-top
+    display: none
+  .footer-contacts_mobile
+    display: flex
+    align-items: center
+    margin-top: 25px
+  .footer-bottom
+    margin: 0
+    border: none
+    flex-direction: column
+    padding: 0
+  .footer-bottom-info
+    flex-direction: column
+    margin-top: 5px
+  .footer
+    padding: 40px 20px 40px
+  .footer-bottom-link
+    margin-top: 7px
+  .header-fixed-left
+    width: auto
+  .header-fixed .header-burger-span
+    background: #1b2f3e
+  .header-fixed
+    padding: 15px 25px
+  .header-nav_mobile
+    display: block
+  .header-nav-list
+    flex-direction: column
+  .header-nav-link
+    color: #1b2f3e
+    font-size: 12px
+    z-index: 1
+  .header-nav-link rect
+    fill: #1b2f3e
+  .header-nav-item
+    margin: 14px 0
+  .header-drop
+    position: relative
+    opacity: 1
+    padding: 0
+  .header-nav-item
+    flex-direction: column
+    align-items: flex-start
+  .header-nav-link:before
+    background: #eb678e
+  .header-drop-list
+    box-shadow: none
+    padding: 25px 25px 0 25px
+  .header-drop-item
+    margin-bottom: 20px
+  .header-drop
+    display: none
+  .header-nav-link.js-drop.open:before
+    opacity: 0
+  .header-nav-link.open
+    color: #959ba0!important
+  .header-fixed-logo
+    width: 40px
+    height: 40px

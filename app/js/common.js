@@ -19,7 +19,16 @@ $(document).ready(function () {
         infinite: true,
         fade: true,
         slidesToShow: 1,
-        arrows: false
+        autoplay: true,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    dots: false
+                }
+            }
+        ]
     });
 
     //слайдер на item
@@ -124,13 +133,19 @@ $(document).ready(function () {
 
     $('.header-right-link_basket').click(function(e){
         e.preventDefault();
-       $(this).parent().find('.header-basket').addClass('active');
-       $(this).addClass('active');
+       $(this).parent().find('.header-basket').toggleClass('active');
+       $(this).toggleClass('active');
+       if($(window).width() < 1024 && $(this).hasClass('active')) {
+           bodyFreezeScroll();
+       }
+       else {
+           bodyUnfreezeScroll()
+       }
     });
 
     $(document).mouseup(function (e) {
         var container = $(".header-basket");
-        if (container.has(e.target).length === 0){
+        if (container.has(e.target).length === 0 && $(window).width() > 1023){
             container.removeClass('active');
             $('.header-right-link_basket').removeClass('active');
         }
@@ -328,40 +343,6 @@ $(document).ready(function () {
                 .addTo(controller);
         })
     }
-    // var heightDuration = $('.contact-right').height() - $('.contact-form-trigger').position().top - $('.contact-form-trigger').height();
-    // if (heightDuration < 1) {
-    //     heightDuration = 1;
-    // }
-    var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "0", offset: "-80"}});
-    var scene1 = new ScrollMagic.Scene({
-        triggerElement: ".price-right", // point of execution
-        duration: $('.price-left').height() - $('.price-right').position().top - 20, // pin element for the window height - 1
-        reverse: true // allows the effect to trigger when scrolled in the reverse direction
-    })
-        .setPin(".price-right") // the element we want to pin
-        .addTo(controller);
-
-    var controller2 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "0", offset: "-100"}});
-    var scene1 = new ScrollMagic.Scene({
-        triggerElement: "#thermal .price-table-top", // point of execution
-        duration: $('#thermal .price-table').height(), // pin element for the window height - 1
-        reverse: true // allows the effect to trigger when scrolled in the reverse direction
-    })
-        .setPin("#thermal .price-table-top") // the element we want to pin
-        .addTo(controller2);
-
-    // var controller2 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "0", offset: "-90"}});
-    // $('.price-table-top').each(function(){
-    //     console.log('ww');
-    //     var scene2 = new ScrollMagic.Scene({
-    //         triggerElement: '.price-table-top', // point of execution
-    //         duration: 100, // pin element for the window height - 1
-    //         reverse: true // allows the effect to trigger when scrolled in the reverse direction
-    //     })
-    //         .setPin('.price-table-top') // the element we want to pin
-    //         .addTo(controller2);
-    // });
-
 
     if ($(window).width() > 1023) {
         gsapTop();
@@ -370,6 +351,144 @@ $(document).ready(function () {
         gsapCard();
         gsapFadeTop2()
     }
+    if($('.price').length > 0) {
+        var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "0", offset: "-80"}});
+        var scene1 = new ScrollMagic.Scene({
+            triggerElement: ".price-right", // point of execution
+            duration: $('.price-left').height() - $('.price-right').position().top - 20, // pin element for the window height - 1
+            reverse: true // allows the effect to trigger when scrolled in the reverse direction
+        })
+            .setPin(".price-right") // the element we want to pin
+            .addTo(controller);
+
+        var controller2 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "0", offset: "-90"}});
+        var scene2 = new ScrollMagic.Scene({
+            triggerElement: "#thermal .price-table-fixed", // point of execution
+            duration: $('#thermal .price-table').height(), // pin element for the window height - 1
+            reverse: true // allows the effect to trigger when scrolled in the reverse direction
+        })
+            .setPin("#thermal .price-table-fixed") // the element we want to pin
+            .addTo(controller2);
+
+        var controller3 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "0", offset: "-90"}});
+        var scene3 = new ScrollMagic.Scene({
+            triggerElement: "#direct .price-table-fixed", // point of execution
+            duration: $('#direct .price-table').height(), // pin element for the window height - 1
+            reverse: true // allows the effect to trigger when scrolled in the reverse direction
+        })
+            .setPin("#direct .price-table-fixed") // the element we want to pin
+            .addTo(controller3);
+
+        var controller4 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "0", offset: "-90"}});
+        var scene4 = new ScrollMagic.Scene({
+            triggerElement: "#slick .price-table-fixed", // point of execution
+            duration: $('#slick .price-table').height(), // pin element for the window height - 1
+            reverse: true // allows the effect to trigger when scrolled in the reverse direction
+        })
+            .setPin("#slick .price-table-fixed") // the element we want to pin
+            .addTo(controller4);
+
+        var controller5 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "0", offset: "-90"}});
+        var scene5 = new ScrollMagic.Scene({
+            triggerElement: "#photo .price-table-fixed", // point of execution
+            duration: $('#photo .price-table').height(), // pin element for the window height - 1
+            reverse: true // allows the effect to trigger when scrolled in the reverse direction
+        })
+            .setPin("#photo .price-table-fixed") // the element we want to pin
+            .addTo(controller5);
+
+        var controller6 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "0", offset: "-90"}});
+        var scene6 = new ScrollMagic.Scene({
+            triggerElement: "#copy .price-table-fixed", // point of execution
+            duration: $('#copy .price-table').height(), // pin element for the window height - 1
+            reverse: true // allows the effect to trigger when scrolled in the reverse direction
+        })
+            .setPin("#copy .price-table-fixed") // the element we want to pin
+            .addTo(controller6);
+
+        var controller7 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "0", offset: "-90"}});
+        var scene7 = new ScrollMagic.Scene({
+            triggerElement: "#print .price-table-fixed", // point of execution
+            duration: $('#print .price-table').height(), // pin element for the window height - 1
+            reverse: true // allows the effect to trigger when scrolled in the reverse direction
+        })
+            .setPin("#print .price-table-fixed") // the element we want to pin
+            .addTo(controller7);
+
+        var controller8 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "0", offset: "-90"}});
+        var scene8 = new ScrollMagic.Scene({
+            triggerElement: "#scanning .price-table-fixed", // point of execution
+            duration: $('#scanning .price-table').height(), // pin element for the window height - 1
+            reverse: true // allows the effect to trigger when scrolled in the reverse direction
+        })
+            .setPin("#scanning .price-table-fixed") // the element we want to pin
+            .addTo(controller8);
+
+        var controller9 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "0", offset: "-90"}});
+        var scene9 = new ScrollMagic.Scene({
+            triggerElement: "#lamination .price-table-fixed", // point of execution
+            duration: $('#lamination .price-table').height(), // pin element for the window height - 1
+            reverse: true // allows the effect to trigger when scrolled in the reverse direction
+        })
+            .setPin("#lamination .price-table-fixed") // the element we want to pin
+            .addTo(controller9);
+
+        var controller10 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "0", offset: "-90"}});
+        var scene10 = new ScrollMagic.Scene({
+            triggerElement: "#widescreen .price-table-fixed", // point of execution
+            duration: $('#widescreen .price-table').height(), // pin element for the window height - 1
+            reverse: true // allows the effect to trigger when scrolled in the reverse direction
+        })
+            .setPin("#widescreen .price-table-fixed") // the element we want to pin
+            .addTo(controller10);
+
+        var controller11 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "0", offset: "-90"}});
+        var scene11 = new ScrollMagic.Scene({
+            triggerElement: "#cutaway .price-table-fixed", // point of execution
+            duration: $('#cutaway .price-table').height(), // pin element for the window height - 1
+            reverse: true // allows the effect to trigger when scrolled in the reverse direction
+        })
+            .setPin("#cutaway .price-table-fixed") // the element we want to pin
+            .addTo(controller11);
+
+        var controller12 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "0", offset: "-90"}});
+        var scene12 = new ScrollMagic.Scene({
+            triggerElement: "#flyer .price-table-fixed", // point of execution
+            duration: $('#flyer .price-table').height(), // pin element for the window height - 1
+            reverse: true // allows the effect to trigger when scrolled in the reverse direction
+        })
+            .setPin("#flyer .price-table-fixed") // the element we want to pin
+            .addTo(controller12);
+
+        var controller13 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "0", offset: "-90"}});
+        var scene13 = new ScrollMagic.Scene({
+            triggerElement: "#signet .price-table-fixed", // point of execution
+            duration: $('#signet .price-table').height(), // pin element for the window height - 1
+            reverse: true // allows the effect to trigger when scrolled in the reverse direction
+        })
+            .setPin("#signet .price-table-fixed") // the element we want to pin
+            .addTo(controller13);
+
+        var controller14 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "0", offset: "-90"}});
+        var scene14 = new ScrollMagic.Scene({
+            triggerElement: "#stamp .price-table-fixed", // point of execution
+            duration: $('#stamp .price-table').height(), // pin element for the window height - 1
+            reverse: true // allows the effect to trigger when scrolled in the reverse direction
+        })
+            .setPin("#stamp .price-table-fixed") // the element we want to pin
+            .addTo(controller14);
+    }
+
+    //мобильное меню
+    $('.js-drop').click(function(e){
+        e.preventDefault();
+        $(this).parent().find('.header-drop').slideToggle();
+        $(this).toggleClass('open');
+    });
+    $('.header-burger').click(function(){
+        $('.menu').addClass('active');
+        bodyFreezeScroll();
+    });
 });
 $(window).scroll(function () {
     if ($(this).scrollTop() > 200) {
