@@ -6,7 +6,7 @@
 	<title>Title</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">-->
-    <meta name="viewport" content="width=480, maximum-scale=1.0"/>
+    <meta name="viewport" content="width=360, maximum-scale=1.0"/>
 	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 	<link rel="stylesheet" href="css/libs.min.css">
 	<link rel="stylesheet" href="css/main.css">
@@ -16,70 +16,75 @@
 <body>
 	@import "header.html"
 	@import "header-fixed.html"
+	@import "menu-mobile.html"
 	<section class="order">
 		<div class="container">
 			<div class="order-content">
 				<div class="order-left">
 					<h4 class="order-subtitle subtitle">
-						<span class="subtitle-span">Товары в корзине</span>
+						<span class="subtitle-span"><span class="order-hide">Товары</span>  в корзине</span>
 					</h4>
 					<div class="order-list">
 						<div class="order-item">
-							<div class="order-photo">
-								<img src="img/basket.jpg" alt="" class="order-photo-img">
+							<div class="order-flex">
+								<div class="order-photo">
+									<img src="img/basket.jpg" alt="" class="order-photo-img">
+								</div>
+								<div class="order-info">
+									<h6 class="order-info-title">Толстовка унисекс синяя</h6>
+									<span class="header-basket-label active">С печатью</span>
+								</div>
 							</div>
-							<div class="order-info">
-								<h6 class="order-info-title">Толстовка унисекс синяя</h6>
-								<span class="header-basket-label active">С печатью</span>
-								<div class="order-info-table">
-									<div class="order-info-row">
-										<p class="order-info-key">Размер:</p>
-										<p class="order-info-value">XL</p>
-									</div>
-									<div class="order-info-row">
-										<p class="order-info-key">Формат печати:</p>
-										<p class="order-info-value">A4</p>
-									</div>
-									<div class="order-info-row">
-										<p class="order-info-key">Что печатать:</p>
-										<p class="order-info-value">Картинка</p>
-									</div>
-									<div class="order-info-row">
-										<p class="order-info-key">Способ печати:</p>
-										<p class="order-info-value">Прямая печать</p>
-									</div>
-									<div class="order-info-row">
-										<p class="order-info-key">Количество:</p>
-										<p class="order-info-value">1шт.</p>
-									</div>
-									<div class="order-info-row">
-										<p class="order-info-key">Сумма:</p>
-										<p class="order-info-value">1280 руб.</p>
-									</div>
+							<div class="order-info-table">
+								<div class="order-info-row">
+									<p class="order-info-key">Размер:</p>
+									<p class="order-info-value">XL</p>
+								</div>
+								<div class="order-info-row">
+									<p class="order-info-key">Формат печати:</p>
+									<p class="order-info-value">A4</p>
+								</div>
+								<div class="order-info-row">
+									<p class="order-info-key">Что печатать:</p>
+									<p class="order-info-value">Картинка</p>
+								</div>
+								<div class="order-info-row">
+									<p class="order-info-key">Способ печати:</p>
+									<p class="order-info-value">Прямая печать</p>
+								</div>
+								<div class="order-info-row">
+									<p class="order-info-key">Количество:</p>
+									<p class="order-info-value">1шт.</p>
+								</div>
+								<div class="order-info-row">
+									<p class="order-info-key">Сумма:</p>
+									<p class="order-info-value">1280 руб.</p>
 								</div>
 							</div>
 							<div class="order-item-close"></div>
 						</div>
 						<div class="order-item">
-							<div class="order-photo">
-								<img src="img/basket.jpg" alt="" class="order-photo-img">
+							<div class="order-flex">
+								<div class="order-photo">
+									<img src="img/basket.jpg" alt="" class="order-photo-img">
+								</div>
+								<div class="order-info">
+									<h6 class="order-info-title">Толстовка унисекс синяя</h6>
+									<span class="header-basket-label">Без печати</span>
+								</div>
 							</div>
-							<div class="order-info">
-								<h6 class="order-info-title">Толстовка унисекс синяя</h6>
-								<span class="header-basket-label">Без печати</span>
-								<div class="order-info-table">
-									<div class="order-info-row">
-										<p class="order-info-key">Размер:</p>
-										<p class="order-info-value">XL</p>
-									</div>
-									<div class="order-info-row">
-										<p class="order-info-key">Количество:</p>
-										<p class="order-info-value">1шт.</p>
-									</div>
-									<div class="order-info-row">
-										<p class="order-info-key">Сумма:</p>
-										<p class="order-info-value">1280 руб.</p>
-									</div>
+							<div class="order-info-table">
+								<div class="order-info-row">
+									<p class="order-info-key">Размер:</p>
+									<p class="order-info-value">XL</p>
+								</div>
+								<div class="order-info-row">
+									<p class="order-info-key">Количество:</p>
+									<p class="order-info-value">1шт.</p>
+								</div>
+								<div class="order-info-row">
+									<p class="order-info-key">Сумма:</p>
+									<p class="order-info-value">1280 руб.</p>
 								</div>
 							</div>
 							<div class="order-item-close"></div>
@@ -88,7 +93,7 @@
 				</div>
 				<div class="order-right">
 					<h4 class="order-subtitle subtitle">
-						<span class="subtitle-span">Оформление заказа</span>
+						<span class="subtitle-span">Оформление <span class="order-hide"> заказа</span></span>
 					</h4>
 					<form action="" class="order-form">
 						<div class="order-form-item">
@@ -126,12 +131,12 @@
 							<label class="order-form-label">
 								<input type="radio" class="order-form-radio" name="delivery">
 								<span class="order-form-check"></span>
-								<span class="order-form-text">Пункты самовывоза СДЭК: 125 руб. от 3 до 4 дней</span>
+								<span class="order-form-text">Пункты самовывоза СДЭК: 125 руб. <span class="order-hide"> от 3 до 4 дней</span></span>
 							</label>
 							<label class="order-form-label">
 								<input type="radio" class="order-form-radio" name="delivery">
 								<span class="order-form-check"></span>
-								<span class="order-form-text">Курьерская доставка СДЭК: 265 руб. от 3 до 4 дней</span>
+								<span class="order-form-text">Курьерская доставка СДЭК: 265 руб. <span class="order-hide"> от 3 до 4 дней</span></span>
 							</label>
 						</div>
 						<div class="order-form-item">

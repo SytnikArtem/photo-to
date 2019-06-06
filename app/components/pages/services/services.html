@@ -5,8 +5,7 @@
 	<meta charset="utf-8">
 	<title>Title</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">-->
-    <meta name="viewport" content="width=480, maximum-scale=1.0"/>
+    <meta name="viewport" content="width=360, maximum-scale=1.0"/>
 	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 	<link rel="stylesheet" href="css/libs.min.css">
 	<link rel="stylesheet" href="css/main.css">
@@ -16,8 +15,10 @@
 <body>
 	@import "header.html"
 	@import "header-fixed.html"
+	@import "menu-mobile.html"
 	<section class="services">
 		<div class="fourth fourth gsapFadeTop" data-height="200" data-delay="0.1">
+			<div class="fourth-overlay"></div>
 			<div class="container">
 				<h2 class="first-slider-title first-slider-title_fourth">
 					<span class="first-slider-title-span span-overflow">
@@ -63,10 +64,12 @@
 				</div>
 			</div>
 			<div class="services-gallery">
-				<div class="services-gallery-tabs">
-					<a href="" class="services-gallery-tab active">ЛЮДИ В ФУТБОЛКАХ</a>
-					<a href="" class="services-gallery-tab">ПРИНТЫ в макро</a>
-					<a href="" class="services-gallery-tab">ПРОИЗВОДСТВЕННЫЙ процесс</a>
+				<div class="services-gallery-overflow">
+					<div class="services-gallery-tabs">
+						<a href="" class="services-gallery-tab active">ЛЮДИ В ФУТБОЛКАХ</a>
+						<a href="" class="services-gallery-tab">ПРИНТЫ в макро</a>
+						<a href="" class="services-gallery-tab">ПРОИЗВОДСТВЕННЫЙ процесс</a>
+					</div>
 				</div>
 				<div class="services-gallery-main">
 					<div class="services-gallery-slider">
@@ -154,8 +157,13 @@
 							<div class="price-column price-edition">
 								<p class="price-item-title">Тираж</p>
 							</div>
+							<div class="price-column"></div>
+							<div class="price-column"></div>
+							<div class="price-column"></div>
 						</div>
 						<div class="price-table-subtop">
+							<div class="price-column price-format"></div>
+							<div class="price-column price-color"></div>
 							<div class="price-column price-edition">
 								<p class="price-item-text">1</p>
 							</div>
@@ -306,6 +314,11 @@
 					</div>
 				</div>
 			</div>
+			<a href="" class="services-btn btn">
+				<span class="btn-span">
+					Узнать цены
+				</span>
+			</a>
 		</div>
     </section>
 	@import "footer.html"

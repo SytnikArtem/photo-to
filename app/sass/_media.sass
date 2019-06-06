@@ -10,6 +10,9 @@
     height: 100%
   .first-slider-img
     width: 90%
+  .catalog-item-content
+    padding: 15px
+    align-items: flex-end
 @media only screen and (max-width : 1230px)
   .header
     padding: 30px 30px
@@ -48,29 +51,77 @@
     margin-right: 30px
   .first-slider-img
     margin-right: -5%
+  .back-popup-close
+    position: absolute
+    top: 10px
+    right: 10px
+    background: url(../img/close_popup.svg) no-repeat center
+    background-size: 12px 12px
+    border: 1px solid #e4e4e4
+    border-radius: 50%
+  .back-popup-content
+    position: relative
+    padding: 25px
+  .view-left
+    height: auto
+  .services-main
+    padding: 0
+  .price-right
+    display: none
+  .price-left
+    width: 100%
+    margin-right: 0
+  .price .container
+    padding: 0
+  .price
+    .price-item-subtitle, .price-table-top, .price-table-main, .price-table-subtop
+      padding-left: 30px
+      padding-right: 30px
+@media only screen and (max-width : 1200px)
+  .item-color:nth-child(10n + 10)
+    margin-right: 10px
+  .item-main
+    display: block
+  .item-dots
+    display: none
+  .item-info
+    display: none
+  .item-left, .item-right
+    width: 100%
+  .item-right
+    margin-top: 24px
+  .item-subtitle
+    margin-top: 24px
+  .item-table
+    padding-top: 40px
+  .item-table-flex
+    margin-top: 30px
+  .item-table-flex
+    flex-direction: column-reverse
+  .item-table-right
+    margin: 0 auto 30px
 @media only screen and (max-width : 1023px)
-  .header-nav
-    display: none
-  .header-bottom, .header-right-link_login
-    display: none
+  .item-span-br
+    display: block
+  .second-content
+    padding: 0
+  .catalog-item
+    width: 50%
+    border: 1px solid #f0f0f0
   .header-top
     border-bottom: none
   .header-right-link_basket
     font-size: 0
   .header-right-svg
     margin-left: 0
+  .header-main
+    padding-left: 15px
   .header-logo
     width: 60px
     height: 60px
     margin: 0
-  .header-burger
-    display: block
-  .header-top
-    padding: 0
   .header-flex
     justify-content: space-between
-  .header-main
-    width: auto
   .header-right-link_basket
     margin-right: 0
     position: relative
@@ -192,10 +243,141 @@
     left: 0
     bottom: 0
     width: 100%
+  .catalog
+    padding: 0
+  .catalog-subtitle
+    padding: 24px 0
+    margin: 0
+    border-top: 1px solid rgba(#b4b4b4, 0.2)
+  .item
+    padding: 0 0 25px
+    .container
+      padding: 0
+  .item-right, .item-table
+    padding: 0 25px
+    border-top: none
+  .item-file-span
+    width: 100%
+    text-align: center
+  .item-table-row
+    flex-direction: column
+  .item-table-title
+    width: 100%
+    margin-top: 15px
+  .item-table-row:first-child .item-table-item
+    border-top: none
+  .item-table-block
+    max-width: 100%
+    justify-content: start
+  .item-table-item
+    color: #1b2f3e
+    width: 100%
+  .item-table-right
+    margin: 0 0 30px
+  .item-table-subtitle
+    text-align: left
+  .item-table-row:last-child
+    .item-table-item
+      border-bottom: none
+  .item-main
+    padding-bottom: 10px
+  .item-info-mob
+    display: block
+    margin: 20px 0 0
+  .post-content-bottom-img
+    width: 50%
+    height: 30vw
+  .post
+    padding: 0
+  .post-content-bottom
+    margin: 12px 0 0
+  .order-info .header-basket-label
+    display: inline-block
+  .order-content
+    display: block
+  .order-left, .order-right
+    width: 100%
+  .order-right
+    margin-top: 30px
+  .order-form
+    margin-top: 30px
+  .select2-container:last-child
+    margin-bottom: 5px
+  .profile-content
+    flex-direction: column-reverse
+  .profile-right, .profile-list
+    width: 100%
+    margin-bottom: 23px
+  .profile-cart
+    max-width: 480px
+  .profile-order-top .header-basket-label
+    display: block
+  .services-table
+    display: none
+  .services-btn
+    display: block
+    margin: 30px auto
+    max-width: 400px
+    text-align: center
+    width: calc(100% - 50px)
+  .services
+    padding-bottom: 0
+  .header-fixed-left
+    width: auto
+  .profile-cart
+    margin: 0 auto 25px
+  .price-main
+    display: none
+  .price-mobile
+    display: block
+  .price .container
+    padding: 0 25px
+  .price .price-item-subtitle, .price .price-table-top, .price .price-table-main, .price .price-table-subtop
+    padding-left: 0
+    padding-right: 0
+  .price-mobile
+    .item-size
+      min-width: 38px
+      width: auto
+    .item-size-span
+      padding: 0 7px
+  .price
+    border-top: 1px solid rgba(180, 180, 180, 0.2)
+    padding-bottom: 30px
+  .price-mobile-form
+    margin-top: 15px
 @media only screen and (max-width : 767px)
+  .header-row
+    display: none
+  .header-bottom, .header-right-link_login
+    display: none
+  .header-bottom
+    display: none
+  .header-bottom-list
+    display: none
+    flex-direction: column
+    align-items: start
+  .header_dark .header-top
+    border-bottom: none
+  .header-right-link_basket
+    margin: 0
+  .header-bottom
+    padding-top: 0
+  .header-main
+    padding-left: 0
+  .header-bottom-link_phone
+    display: none
   .header-logo
     width: 40px
     height: 40px
+  .header-main
+    width: auto
+  .header-nav
+    display: none
+  .header-top
+    padding: 0
+  .header-burger
+    display: block
   .first-slider-title
     text-align: center
     letter-spacing: 4.2px
@@ -231,9 +413,9 @@
     align-items: flex-start
     height: 320px
   .second-content
-    padding: 0 25px
+    //padding: 0 25px
   .header
-    padding: 20px 25px
+    padding: 15px 25px
   .third
     padding: 35px 0 10px
   .third-description
@@ -281,11 +463,11 @@
     display: none
   .fifth-row
     flex-direction: column
-    padding: 15px 0
+    padding: 0
   .fifth-right, .fifth-left
     width: 100%
   .fifth-left
-    margin: 0 0 15px 0
+    margin: 0 0 30px 0
   .third-item-overlay, .fifth-left-overlay
     height: 55vw
     max-height: 400px
@@ -294,11 +476,15 @@
   .fifth-right-title
     margin-bottom: 10px
   .fifth-btn
-    margin: 0 auto
+    display: none
   .fifth-row_reverse .fifth-left
     margin-left: 0
   .fifth
     padding: 0 0 25px
+  .news-more
+    display: none
+  .news-content
+    border-bottom: none
   .footer-top
     display: none
   .footer-contacts_mobile
@@ -358,3 +544,341 @@
   .header-fixed-logo
     width: 40px
     height: 40px
+  .contacts-info
+    display: block
+  .contacts-info-right
+    padding: 30px 0 0 0
+    margin: 0
+  .contacts-info-left
+    width: 100%
+    border-bottom: 1px solid #ebebeb
+    border-right: none
+    padding-bottom: 24px
+  .contacts-info-label
+    width: 150px
+  .contacts-info-right
+    width: 100%
+  .contacts-info-value
+    width: calc(100% - 150px)
+  .login-links
+    display: block
+    margin: 24px auto 0
+    max-width: 100%
+  .login-link
+    margin: 10px auto 0
+    max-width: 370px
+    width: 100%
+  .login-logo
+    display: none
+  .login-subtitle
+    font-size: 14px
+  .login
+    padding: 28px 0 30px
+    .container
+      padding: 0
+    &-container
+      margin: 25px auto 0
+      border-top: 1px solid #b4b4b4
+      padding: 0 25px
+  .login-close
+    right: 25px
+    top: 27px
+    width: 16px
+    height: 16px
+    background-size: 16px 16px
+  .news
+    margin-top: 0
+    padding-bottom: 0
+    padding-top: 24px
+    border-top: 1px solid rgba(#b4b4b4, 0.2)
+  .post-content
+    background: none
+    margin: 0
+  .post-container
+    padding: 0
+  .post-top
+    height: 230px
+  .post-subtitle-hide
+    display: none
+  .post-subtitle
+    text-align: left
+    color: #1b2f3e
+    font-family: "avantgardegothicc", sans-serif
+    font-size: 30px
+    font-weight: 700
+    line-height: 31.88px
+    text-transform: uppercase
+    letter-spacing: 2.99px
+  .post-description
+    text-align: left
+    margin: 23px auto
+    max-width: 100%
+  .post-content-first
+    height: 196px
+    margin: 30px auto
+  .post-content-second
+    height: 386px
+    margin: 30px auto
+  .post-content-bottom-img
+    width: 50%
+    height: 37.5vw
+  .post-subtitle-mob
+    display: block
+    margin: 0 auto
+    max-width: 630px
+  .delivery-subtitle
+    font-size: 30px
+  .order-hide
+    display: none
+  .order-info-table
+    margin-top: 20px
+    margin-left: 0
+  .order-form-text
+    white-space: normal
+  .order
+    padding: 25px 0 0 0
+    border-top: 1px solid rgba(#b4b4b4, 0.2)
+    .container
+      padding: 0
+  .order-left, .order-right .order-subtitle
+    padding: 0 25px
+  .order-list
+    margin-top: 25px
+  .order-info-title
+    font-size: 14px
+  .header-basket-label
+    margin-top: 0
+  .order-item-close
+    height: 15px
+  .profile-out
+    &-desctop
+      display: none
+    &-mobile
+      display: block
+      margin-top: 25px
+      padding: 13px 0 0
+      border-top: 1px solid #f4f4f4
+  .profile-top .profile-out-desctop
+    display: block
+  .profile-bottom-item
+    width: calc(50% - 15px)
+  .profile-bottom-item:nth-child(2n + 2)
+    margin-right: 0
+  .profile-hide
+    display: none
+  .profile-btns
+    display: block
+  .profile-btn_delete
+    margin-left: 0
+    margin-top: 5px
+  .profile-list
+    margin-right: 0
+    margin-bottom: 0
+  .profile-order-column
+    display: block
+  .view-content
+    flex-direction: column
+  .view-left
+    width: calc(100% + 50px)
+    margin-left: -25px
+    margin-right: 0
+    padding: 20px 50px
+  .view-right
+    width: 100%
+    padding-top: 25px
+  .view
+    padding: 0 0 25px
+  .view-order
+    margin-bottom: 15px
+  .view-subtitle span
+    display: inline-block
+  .view .order-info-value
+    text-align: right
+  .view-total .order-info-row
+    justify-content: space-between
+  .view-btn
+    width: 100%
+    max-width: 400px
+  .view-table .order-info-row
+    padding: 15.5px 0
+  .view-table
+    margin-top: 10px
+  .view-total
+    margin: 15px 0
+  .services
+    .fourth .container
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+    .fourth-text
+      text-align: left
+      width: 100%
+      max-width: 100%
+      line-height: 16px
+    .first-slider-title
+      font-size: 30px
+  .services-content
+    padding: 20px 0
+  .services-content-flex
+    flex-direction: column
+  .services-content-left
+    width: 100%
+    margin-right: 0
+  .services-content-right
+    width: 100%
+    margin-top: 30px
+  .services
+    padding: 0
+  .services-gallery-block
+    height: 37.5vw
+  .services-gallery-block:first-child
+    height: 75vw
+  .services-gallery-overflow
+    overflow: hidden
+    overflow-x: auto
+    margin-top: 20px
+  .services-gallery-tabs
+    width: 640px
+    padding: 0
+  .services-gallery-main .slick-next, .services-gallery-main .slick-prev
+    top: calc(100% - 29px)
+  .back-popup-form
+    flex-direction: column
+  .back-popup-left
+    width: 100%
+    padding-right: 0
+    border: none
+  .back-popup-btn
+    position: absolute
+    width: calc(100% - 50px)
+    left: 25px
+    bottom: 30px
+  .back-popup-content
+    padding-bottom: 100px
+  .back-popup-info
+    width: 100%
+    padding-left: 0
+  .back-popup-files-item
+    width: auto
+  .back-popup
+    padding: 0
+  .profile-order-column
+    display: none
+    &:first-child
+      display: block
+  .profile-order-bottom-btn
+    position: absolute
+    width: 100%
+    height: 100%
+    font-size: 0
+    background: transparent
+    left: 0
+    top: 0
+    padding: 0
+    margin: 0
+  .profile-order
+    position: relative
+  .profile-order-bottom
+    flex-direction: column
+    padding: 10px
+  .profile-order-bottom-left
+    width: 100%
+  .profile-order-bottom-right
+    width: 100%
+  .profile-order-bottom-right
+    text-align: left
+    padding: 15px 10px 0
+  .profile-order-bottom-img
+    width: 65px
+    height: 65px
+  .profile-order-top
+    padding: 20px
+  .profile-order-bottom-right .profile-order-column
+    display: flex
+    flex-direction: row
+    margin: 5px 0 0
+    align-items: center
+    justify-content: space-between
+  .profile-order-bottom-text
+    margin-bottom: 10px
+  .profile-content
+    padding-bottom: 25px
+  .profile
+    padding-bottom: 0
+    border: 1px solid rgba(180, 180, 180, 0.2)
+  .profile-cart-title
+    font-size: 18px
+  .profile-cart
+    padding: 20px
+  .profile-item_detalis
+    .profile-order-column
+      display: block
+      margin-right: 25px
+      &:nth-child(3), &:nth-child(4)
+        display: none
+    .header-basket-label
+      display: inline-block
+  .profile-view .order-info-value
+    text-align: right
+@media only screen and (max-width : 480px)
+  .item-form-flex_last
+    display: block
+  .item-form-btn
+    width: 100%
+    margin-top: 30px
+  .delivery-item-block
+    padding: 20px 25px 25px 20px
+  .delivery-item-subtitle
+    padding-left: 60px
+  .delivery-row
+    display: block
+    margin-top: 0
+  .delivery-row-item
+    margin-top: 30px
+  .delivery-item-block_third
+    background: url(../img/cards.svg) no-repeat left 20px top 15px
+    background-size: 40px 36px
+  .delivery-item-block_fourth
+    background: url(../img/money.jpg) no-repeat left 20px top 10px
+  .delivery-item-block_fifth
+    background: url(../img/qiwi.png) no-repeat left 20px top 15px
+  .order-form-item
+    padding: 25px
+  .back-popup-files-item
+    width: 153px
+    height: 153px
+    margin-top: 6px
+    margin-right: 6px
+  .back-popup-files-img
+    width: 100%
+    height: 100%
+    object-fit: cover
+  .profile-cart-bottom
+    margin-top: 50px
+  .profile-file-item
+    width: calc(50% - 6px)
+    height: calc(45vw - 6px)
+    margin-right: 6px
+    margin-bottom: 6px
+    &:nth-child(even)
+      margin-right: 0
+  .profile-file-popup
+    padding: 30px 0
+  .profile-file-popup-close
+    position: absolute
+    background: #ffffff url(../img/close_popup.svg) no-repeat center
+    background-size: 12px 12px
+    border-radius: 50%
+    top: 10px
+    right: 10px
+  .profile-view-bottom-row
+    flex-direction: column
+    div
+      width: 100%
+      padding: 0
+      margin-bottom: 20px
+      &:last-child
+        margin-bottom: 0
+  .profile-view-bottom-btn
+    width: 100%
+    text-align: center

@@ -6,7 +6,7 @@
 	<title>Title</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">-->
-    <meta name="viewport" content="width=480, maximum-scale=1.0"/>
+    <meta name="viewport" content="width=360, maximum-scale=1.0"/>
 	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 	<link rel="stylesheet" href="css/libs.min.css">
 	<link rel="stylesheet" href="css/main.css">
@@ -408,10 +408,104 @@
         </div>
     </div>
 </div>
+	<div class="menu">
+    <div class="menu-content">
+        <div class="menu-first">
+            <div class="menu-top">
+                <a href="" class="menu-top-title">Личный кабинет</a>
+            </div>
+            <nav class="header-nav header-nav_mobile">
+                <ul class="header-nav-list">
+                    <li class="header-nav-item">
+                        <a href="" class="header-nav-link active">главная</a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a href="" class="header-nav-link">каталог</a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a href="" class="header-nav-link">Цены</a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a href="" class="header-nav-link js-drop">Услуги</a>
+                        <div class="header-drop">
+                            <ul class="header-drop-list">
+                                <li class="header-drop-item">
+                                    <a href="" class="header-drop-link">Термоперенос</a>
+                                </li>
+                                <li class="header-drop-item">
+                                    <a href="" class="header-drop-link">Прямая печать</a>
+                                </li>
+                                <li class="header-drop-item">
+                                    <a href="" class="header-drop-link">Шелкография</a>
+                                </li>
+                                <li class="header-drop-item">
+                                    <a href="" class="header-drop-link">ЭКО-СОЛЬВЕНТ</a>
+                                </li>
+                                <li class="header-drop-item">
+                                    <a href="" class="header-drop-link">ВЫШИВКА</a>
+                                </li>
+                                <li class="header-drop-item">
+                                    <a href="" class="header-drop-link">СУБЛИМАЦИЯ</a>
+                                </li>
+                                <li class="header-drop-item">
+                                    <a href="" class="header-drop-link">фото на документы</a>
+                                </li>
+                                <li class="header-drop-item">
+                                    <a href="" class="header-drop-link">копия документов</a>
+                                </li>
+                                <li class="header-drop-item">
+                                    <a href="" class="header-drop-link">печать документов</a>
+                                </li>
+                                <li class="header-drop-item">
+                                    <a href="" class="header-drop-link">сканирование документов</a>
+                                </li>
+                                <li class="header-drop-item">
+                                    <a href="" class="header-drop-link">ламинирование</a>
+                                </li>
+                                <li class="header-drop-item">
+                                    <a href="" class="header-drop-link">широкоформатная печать</a>
+                                </li>
+                                <li class="header-drop-item">
+                                    <a href="" class="header-drop-link">изготовление визиток</a>
+                                </li>
+                                <li class="header-drop-item">
+                                    <a href="" class="header-drop-link">изготовление флаеров</a>
+                                </li>
+                                <li class="header-drop-item">
+                                    <a href="" class="header-drop-link">изготовление печатей</a>
+                                </li>
+                                <li class="header-drop-item">
+                                    <a href="" class="header-drop-link">изготовление штампов</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="header-nav-item">
+                        <a href="" class="header-nav-link">Новости</a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a href="" class="header-nav-link">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <ul class="menu-submenu">
+            <li class="header-nav-item">
+                <a href="" class="header-nav-link">доставка</a>
+            </li>
+            <li class="header-nav-item">
+                <a href="" class="header-nav-link">оплата</a>
+            </li>
+            <li class="header-nav-item">
+                <a href="" class="header-nav-link">возврат товара</a>
+            </li>
+        </ul>
+    </div>
+</div>
 	<section class="profile">
 		<div class="container">
 			<h4 class="profile-subtitle subtitle">
-				<span class="subtitle-span">Личная информация</span>
+				<span class="subtitle-span"><span class="profile-hide"> Личная </span>информация</span>
 			</h4>
 			<div class="profile-main">
 				<div class="profile-top">
@@ -421,7 +515,7 @@
 						<a href="" class="profile-tab">изменить пароль</a>
 						<a href="" class="profile-tab">мои файлы</a>
 					</div>
-					<a href="" class="profile-out">Выйти</a>
+					<a href="" class="profile-out profile-out-desctop">Выйти</a>
 				</div>
 				<div class="profile-content">
 					<div class="profile-list">
@@ -452,6 +546,7 @@
 									<span class="btn-span">удалить профиль</span>
 								</a>
 							</div>
+							<a href="" class="profile-out profile-out-mobile">Выйти</a>
 						</div>
 						<div class="profile-item">
 							<div class="profile-order">
@@ -489,6 +584,14 @@
 										<a href="" class="profile-order-bottom-btn btn">
 											<span class="btn-span">Смотреть заказ</span>
 										</a>
+										<div class="profile-order-column">
+											<p class="profile-order-title">Дата</p>
+											<p class="profile-order-value">11/17/2019</p>
+										</div>
+										<div class="profile-order-column">
+											<p class="profile-order-title">Сумма</p>
+											<p class="profile-order-value">4899 ₽</p>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -523,6 +626,14 @@
 										<a href="" class="profile-order-bottom-btn btn">
 											<span class="btn-span">Смотреть заказ</span>
 										</a>
+										<div class="profile-order-column">
+											<p class="profile-order-title">Дата</p>
+											<p class="profile-order-value">11/17/2019</p>
+										</div>
+										<div class="profile-order-column">
+											<p class="profile-order-title">Сумма</p>
+											<p class="profile-order-value">4899 ₽</p>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -557,6 +668,14 @@
 										<a href="" class="profile-order-bottom-btn btn">
 											<span class="btn-span">Смотреть заказ</span>
 										</a>
+										<div class="profile-order-column">
+											<p class="profile-order-title">Дата</p>
+											<p class="profile-order-value">11/17/2019</p>
+										</div>
+										<div class="profile-order-column">
+											<p class="profile-order-title">Сумма</p>
+											<p class="profile-order-value">4899 ₽</p>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -591,6 +710,14 @@
 										<a href="" class="profile-order-bottom-btn btn">
 											<span class="btn-span">Смотреть заказ</span>
 										</a>
+										<div class="profile-order-column">
+											<p class="profile-order-title">Дата</p>
+											<p class="profile-order-value">11/17/2019</p>
+										</div>
+										<div class="profile-order-column">
+											<p class="profile-order-title">Сумма</p>
+											<p class="profile-order-value">4899 ₽</p>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -674,60 +801,64 @@
 								</div>
 								<div class="profile-view-main">
 									<div class="order-item">
-										<div class="order-photo">
-											<img src="img/basket.jpg" alt="" class="order-photo-img">
+										<div class="order--item-flex">
+											<div class="order-photo">
+												<img src="img/basket.jpg" alt="" class="order-photo-img">
+											</div>
+											<div class="order-info">
+												<h6 class="order-info-title">Толстовка унисекс синяя</h6>
+												<span class="header-basket-label active">С печатью</span>
+											</div>
 										</div>
-										<div class="order-info">
-											<h6 class="order-info-title">Толстовка унисекс синяя</h6>
-											<span class="header-basket-label active">С печатью</span>
-											<div class="order-info-table">
-												<div class="order-info-row">
-													<p class="order-info-key">Размер:</p>
-													<p class="order-info-value">XL</p>
-												</div>
-												<div class="order-info-row">
-													<p class="order-info-key">Формат печати:</p>
-													<p class="order-info-value">A4</p>
-												</div>
-												<div class="order-info-row">
-													<p class="order-info-key">Что печатать:</p>
-													<p class="order-info-value">Картинка</p>
-												</div>
-												<div class="order-info-row">
-													<p class="order-info-key">Способ печати:</p>
-													<p class="order-info-value">Прямая печать</p>
-												</div>
-												<div class="order-info-row">
-													<p class="order-info-key">Количество:</p>
-													<p class="order-info-value">1шт.</p>
-												</div>
-												<div class="order-info-row">
-													<p class="order-info-key">Сумма:</p>
-													<p class="order-info-value">1280 руб.</p>
-												</div>
+										<div class="order-info-table">
+											<div class="order-info-row">
+												<p class="order-info-key">Размер:</p>
+												<p class="order-info-value">XL</p>
+											</div>
+											<div class="order-info-row">
+												<p class="order-info-key">Формат печати:</p>
+												<p class="order-info-value">A4</p>
+											</div>
+											<div class="order-info-row">
+												<p class="order-info-key">Что печатать:</p>
+												<p class="order-info-value">Картинка</p>
+											</div>
+											<div class="order-info-row">
+												<p class="order-info-key">Способ печати:</p>
+												<p class="order-info-value">Прямая печать</p>
+											</div>
+											<div class="order-info-row">
+												<p class="order-info-key">Количество:</p>
+												<p class="order-info-value">1шт.</p>
+											</div>
+											<div class="order-info-row">
+												<p class="order-info-key">Сумма:</p>
+												<p class="order-info-value">1280 руб.</p>
 											</div>
 										</div>
 									</div>
 									<div class="order-item">
-										<div class="order-photo">
-											<img src="img/basket.jpg" alt="" class="order-photo-img">
+										<div class="order--item-flex">
+											<div class="order-photo">
+												<img src="img/basket.jpg" alt="" class="order-photo-img">
+											</div>
+											<div class="order-info">
+												<h6 class="order-info-title">Толстовка унисекс синяя</h6>
+												<span class="header-basket-label">Без печати</span>
+											</div>
 										</div>
-										<div class="order-info">
-											<h6 class="order-info-title">Толстовка унисекс синяя</h6>
-											<span class="header-basket-label">Без печати</span>
-											<div class="order-info-table">
-												<div class="order-info-row">
-													<p class="order-info-key">Размер:</p>
-													<p class="order-info-value">XL</p>
-												</div>
-												<div class="order-info-row">
-													<p class="order-info-key">Количество:</p>
-													<p class="order-info-value">1шт.</p>
-												</div>
-												<div class="order-info-row">
-													<p class="order-info-key">Сумма:</p>
-													<p class="order-info-value">1280 руб.</p>
-												</div>
+										<div class="order-info-table">
+											<div class="order-info-row">
+												<p class="order-info-key">Размер:</p>
+												<p class="order-info-value">XL</p>
+											</div>
+											<div class="order-info-row">
+												<p class="order-info-key">Количество:</p>
+												<p class="order-info-value">1шт.</p>
+											</div>
+											<div class="order-info-row">
+												<p class="order-info-key">Сумма:</p>
+												<p class="order-info-value">1280 руб.</p>
 											</div>
 										</div>
 									</div>

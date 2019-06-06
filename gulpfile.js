@@ -59,6 +59,7 @@ gulp.task('libs-js', function(){
       'app/libs/ScrollMagic.min.js',
       'app/libs/animation.gsap.js',
       'app/libs/addIndicators.min.js',
+      'app/libs/jquery.touchSwipe.min.js'
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())

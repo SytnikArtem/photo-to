@@ -45,7 +45,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
 	display: block
 
-ol, ul 
+ol, ul
 	list-style: none
 
 blockquote, q
@@ -190,6 +190,10 @@ img
 			margin-left: 25px
 		.header-top
 			border-bottom: 1px solid rgba(180, 180, 180, 0.2)
+		.header-burger-span
+			background: $dark
+		.header-logo
+			border: 1px solid $dark
 	&-flex
 		display: flex
 		align-items: center
@@ -211,6 +215,9 @@ img
 		padding-bottom: 15px
 		border-bottom: 1px solid rgba(255, 255, 255, 0.2)
 	&-nav
+		&.active
+			opacity: 1
+			pointer-events: auto
 		&-list
 			display: flex
 			align-items: flex-start
@@ -811,7 +818,7 @@ img
 	&-item
 		position: relative
 		width: 25%
-		height: 600px
+		max-height: 600px
 		cursor: pointer
 		overflow: hidden
 		display: flex
@@ -914,6 +921,7 @@ img
 			font-family: "Lato-Semibold"
 			font-size: 15px
 			margin-top: 10px
+
 	&-right
 		width: 470px
 		padding-top: 5px
@@ -936,7 +944,7 @@ img
 	&-form
 		margin-top: 30px
 		&-row
-			margin-bottom: 18px
+			margin-bottom: 25px
 		&-title
 			color: rgba(0, 0, 0, 0.5)
 			font-family: "Lato-Bold"
@@ -950,13 +958,15 @@ img
 			&_last
 				align-items: center
 				justify-content: space-between
-				padding-top: 25px
+				padding-top: 30px
 				border-top: 1px solid #f3f3f3
 		&-label
 			position: relative
 			cursor: pointer
 			margin-right: 10px
 			margin-bottom: 10px
+			&:last-child
+				margin-bottom: 0
 		&-input
 			width: 0
 			height: 0
@@ -1238,7 +1248,12 @@ img
 			justify-content: space-between
 			margin-top: 55px
 		&-left
-			width: 900px
+			max-width: 900px
+		&-block
+			display: flex
+			justify-content: flex-end
+			width: 100%
+			max-width: 630px
 		&-right
 			width: 220px
 		&-row
@@ -1251,6 +1266,7 @@ img
 					font-family: "Lato-Black"
 		&-title
 			width: 270px
+			white-space: nowrap
 			color: #757b7f
 			font-size: 14px
 		&-item
@@ -1271,10 +1287,12 @@ img
 		display: flex
 		justify-content: space-between
 	&-left
-		width: 900px
+		width: calc(100% - 270px)
+		margin-right: 40px
 	&-right
 		width: 200px
 		padding-top: 60px
+		flex-shrink: 0
 	&-table
 		display: flex
 		flex-direction: column
@@ -1287,7 +1305,7 @@ img
 		&-subtop
 			display: flex
 			align-items: center
-			justify-content: flex-end
+			justify-content: flex-start
 			.price-item-text
 				color: #1b2f3e
 		&-row
@@ -1532,11 +1550,15 @@ img
 			text-decoration: none
 	.fifth-right-title
 		margin-bottom: 25px
+.post-container
+	padding: 0 30px
 .post
 	padding: 5px 0 50px
 	&-subtitle
 		text-align: center
 		letter-spacing: 3px
+		&-mob
+			display: none
 	&-description
 		max-width: 555px
 		color: #5b6268
@@ -1584,6 +1606,8 @@ img
 			&-img
 				width: 33.33%
 				position: relative
+	&-nowrap
+		white-space: nowrap
 	&-top
 		position: relative
 		width: 100%
@@ -1656,12 +1680,15 @@ img
 	&-left
 		width: 600px
 		margin-right: 40px
+	&-nowrap
+		white-space: nowrap
 	&-right
 		width: 470px
-	&-item
+	&-flex
 		display: flex
 		justify-content: flex-start
 		align-items: flex-start
+	&-item
 		margin-top: 30px
 		position: relative
 		padding-bottom: 8px
@@ -1707,7 +1734,8 @@ img
 			width: 46%
 			color: #000000
 		&-table
-			margin-top: 20px
+			margin-top: -10px
+			margin-left: 100px
 	&-form
 		background-color: #f8f8f8
 		margin-top: 60px
@@ -1759,7 +1787,9 @@ img
 			color: #5d6265
 			font-size: 14px
 			transition: color .5s ease
+			white-space: nowrap
 		&-input
+			max-width: 410px
 			width: 100%
 			background-color: $white
 			height: 38px
@@ -1785,12 +1815,15 @@ img
 			&-number
 				font-size: 16px
 		&-btn
+			max-width: 410px
 			width: 100%
 .select2-container
-	width: 100%!important
+	width: auto!important
+	display: block
+	max-width: 730px
 	outline: none
 	margin-bottom: 5px
-	z-index: 5
+	z-index: 2
 	&:last-child
 		margin-bottom: 0
 .select2-container .select2-selection--single
@@ -1854,6 +1887,7 @@ img
 		margin: 35px auto 0
 	&-link
 		width: 260px
+		display: block
 		height: 46px
 		line-height: 46px
 		text-decoration: none
@@ -1970,6 +2004,7 @@ img
 	&-content
 		display: flex
 		justify-content: space-between
+		align-items: flex-start
 	&-left
 		width: 600px
 		background: #f6f6f6
@@ -1978,6 +2013,7 @@ img
 		align-items: center
 		justify-content: center
 		margin-right: 30px
+		padding: 20px
 	&-right
 		width: 470px
 		padding-top: 10px
@@ -1993,6 +2029,7 @@ img
 	&-table
 		margin-top: 30px
 		border-bottom: 1px solid #f4f4f4
+		margin-left: 0
 	.order-info-key
 		width: 58%
 		&_total
@@ -2019,6 +2056,7 @@ img
 		margin-right: 30px
 		position: relative
 		transition: height .5s ease
+		overflow: hidden
 	&-item
 		opacity: 0
 		pointer-events: none
@@ -2041,6 +2079,9 @@ img
 		align-items: center
 		justify-content: space-between
 		border-bottom: 1px solid #f4f4f4
+		overflow-x: auto
+		flex-wrap: nowrap
+		white-space: nowrap
 	&-tab
 		color: #000000
 		font-family: "Lato-Bold"
@@ -2120,6 +2161,8 @@ img
 		font-size: 12px
 		text-transform: uppercase
 		text-decoration: none
+		&-mobile
+			display: none
 	&-cart
 		border-radius: 10px
 		background-color: #1b2f3e
@@ -2184,8 +2227,6 @@ img
 			margin-bottom: 30px
 			&:nth-child(4n + 4)
 				margin-right: 0
-		&-img
-			max-width: 240px
 	&-order
 		display: block
 		border: 1px solid #e9e9e9
@@ -2238,10 +2279,13 @@ img
 				width: 140px
 				flex-shrink: 0
 				text-align: right
+				.profile-order-column
+					display: none
 			&-left
 				width: 450px
 				display: flex
 				flex-wrap: wrap
+				align-items: flex-start
 			&-img
 				margin-right: 10px
 				max-width: 80px
@@ -2414,6 +2458,12 @@ img
 					background-color: darken(#3b5998, 10%)
 .delivery
 	padding: 20px 0 50px
+	&-nowrap
+		white-space: nowrap
+		color: #5b6268
+		font-size: 14px
+		line-height: 18px
+		position: relative
 	&-subtitle
 		letter-spacing: 3px
 	&-description
@@ -2453,7 +2503,7 @@ img
 			font-size: 20px
 			letter-spacing: 0.2px
 	&-list
-		margin-top: 10px
+		margin-top: 15px
 		&-item
 			color: #5b6268
 			font-size: 14px
@@ -2533,8 +2583,8 @@ img
 		&-content
 			max-width: 970px
 			background: $white
-			min-height: 765px
 			padding: 40px
+			width: 100%
 		&-title
 			letter-spacing: 3px
 		&-form
@@ -2714,7 +2764,13 @@ img
 			height: 50px
 			border: 1px solid #000000
 			border-radius: 50%
-			display: block
+			display: flex
+			align-items: center
+			justify-content: center
+			color: #000000
+			font-size: 12px
+			text-decoration: none
+
 .span-transform, .subtitle-span
 	display: inline-block
 .span-overflow
@@ -2761,9 +2817,11 @@ img
 .price-table
 	position: relative
 	padding-top: 37px
-.price-table-top
+.price-table-fixed .price-table-top
 	max-width: 1170px
+	padding: 11px 0px
 	margin: 0 auto
+	width: 100%
 .delivery-item-radio
 	width: 0
 	height: 0
@@ -2784,6 +2842,7 @@ img
 	height: 100%
 	background: rgba(233, 233, 233, 0.51)
 	z-index: -1
+
 .header-burger
 	width: 19px
 	height: 16px
@@ -2804,6 +2863,7 @@ img
 		&_second
 			top: 50%
 			transform: translateY(-50%)
+
 .footer-contacts_mobile
 	display: none
 .menu
@@ -2847,8 +2907,8 @@ img
 				background-size: 6px 8px
 				content: ''
 				right: 0
-				top: 50%
-				transform: translateY(-50%) rotate(180deg)
+				top: 3px
+				transform: rotate(180deg)
 	&-submenu
 		border-top: 1px solid rgba(180, 180, 180, 0.2)
 		display: flex
@@ -2865,4 +2925,46 @@ img
 	display: none
 	&-title
 		margin-right: 10px
+.services-btn
+	display: none
+.services-gallery-tab
+	white-space: nowrap
+.profile-file-img
+	width: 100%
+	height: 100%
+	object-fit: cover
+.order--item-flex
+	display: flex
+.price-mobile
+	display: none
+	&-label
+		color: rgba(0, 0, 0, 0.5)
+		font-family: "Lato-Bold"
+		font-size: 12px
+		text-transform: uppercase
+	&-number
+		color: #1b2f3e
+		font-family: "Lato-Black"
+		font-size: 16px
+	&-value
+		text-transform: uppercase
+		font-size: 32px
+	&-total
+		padding-top: 30px
+		border-top: 1px solid #f3f3f3
+		margin-top: 20px
+.js-price ~ .select2
+	border: 2px solid #e4e4e4
+	.select2-selection__placeholder
+		color: #60666a
+		font-family: "Lato-Black"
+		font-size: 12px
+		text-transform: uppercase
+		letter-spacing: 0.12px
+	.select2-selection--single .select2-selection__rendered
+		line-height: 34px
+.select2-container--default .select2-selection--single .select2-selection__arrow
+	right: 5px
+.mobile-price-row
+	margin: 20px 0 0
 @import "media" // Всегда в конце

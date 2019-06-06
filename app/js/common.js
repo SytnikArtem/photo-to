@@ -38,7 +38,15 @@ $(document).ready(function () {
         arrows: false,
         fade: true,
         asNavFor: '.item-dots',
-        swipe: false
+        // swipe: false
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    centerMode: true
+                }
+            }
+        ]
     });
     $('.item-dots').slick({
         slidesToShow: 5,
@@ -48,6 +56,7 @@ $(document).ready(function () {
         arrows: false,
         // centerMode: true,
         focusOnSelect: true
+
     });
 
     //выбор файла item
@@ -104,7 +113,7 @@ $(document).ready(function () {
         e.preventDefault();
         $(this).addClass('active').parent().siblings().find('.price-list-link').removeClass('active');
         var linkHref = $(this).attr('href');
-        var topPosition = $(linkHref).offset().top;
+        var topPosition = $(linkHref).offset().top - 100;
         $('body,html').animate({scrollTop: topPosition}, 500);
     });
 
@@ -115,7 +124,15 @@ $(document).ready(function () {
         slidesToShow: 4,
         slidesToScroll: 1,
         arrows: true,
-        infinite: false
+        infinite: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2
+                }
+            }
+        ]
     });
 
     //табы services
@@ -162,6 +179,9 @@ $(document).ready(function () {
     });
     $(".back-popup-select").select2({
         placeholder : "Причина обращения"
+    });
+    $(".js-price").select2({
+        placeholder : "Выберите услугу"
     });
 
     //табы profile
@@ -222,6 +242,7 @@ $(document).ready(function () {
     $('.profile-file-close').click(function(e){
         e.stopPropagation();
         $(this).parent().hide();
+        checkHeight();
     });
 
     //попап страница возврата
@@ -352,10 +373,11 @@ $(document).ready(function () {
         gsapFadeTop2()
     }
     if($('.price').length > 0) {
-        var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "0", offset: "-80"}});
+        var priceHeight = $('.price-right').height() / 2;
+        var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "0", offset: "-100"}});
         var scene1 = new ScrollMagic.Scene({
             triggerElement: ".price-right", // point of execution
-            duration: $('.price-left').height() - $('.price-right').position().top - 20, // pin element for the window height - 1
+            duration: $('.price-left').height() - $('.price-right').position().top - 290, // pin element for the window height - 1
             reverse: true // allows the effect to trigger when scrolled in the reverse direction
         })
             .setPin(".price-right") // the element we want to pin
@@ -477,6 +499,33 @@ $(document).ready(function () {
         })
             .setPin("#stamp .price-table-fixed") // the element we want to pin
             .addTo(controller14);
+
+        var controller15 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "0", offset: "-90"}});
+        var scene15 = new ScrollMagic.Scene({
+            triggerElement: "#photo-print .price-table-fixed", // point of execution
+            duration: $('#photo-print .price-table').height(), // pin element for the window height - 1
+            reverse: true // allows the effect to trigger when scrolled in the reverse direction
+        })
+            .setPin("#photo-print .price-table-fixed") // the element we want to pin
+            .addTo(controller15);
+
+        var controller16 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "0", offset: "-90"}});
+        var scene16 = new ScrollMagic.Scene({
+            triggerElement: "#cup .price-table-fixed", // point of execution
+            duration: $('#cup .price-table').height(), // pin element for the window height - 1
+            reverse: true // allows the effect to trigger when scrolled in the reverse direction
+        })
+            .setPin("#cup .price-table-fixed") // the element we want to pin
+            .addTo(controller16);
+
+        var controller17 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "0", offset: "-90"}});
+        var scene17 = new ScrollMagic.Scene({
+            triggerElement: "#cutaway-offset .price-table-fixed", // point of execution
+            duration: $('#cutaway-offset .price-table').height(), // pin element for the window height - 1
+            reverse: true // allows the effect to trigger when scrolled in the reverse direction
+        })
+            .setPin("#cutaway-offset .price-table-fixed") // the element we want to pin
+            .addTo(controller17);
     }
 
     //мобильное меню
@@ -488,6 +537,19 @@ $(document).ready(function () {
     $('.header-burger').click(function(){
         $('.menu').addClass('active');
         bodyFreezeScroll();
+    });
+
+    $('.menu').swipe({
+        swipeLeft:function(event, direction) {
+            $(this).removeClass('active');
+            bodyUnfreezeScroll();
+        }
+    });
+    $('.header-basket').swipe({
+        swipeRight:function(event, direction) {
+            $(this).removeClass('active');
+            bodyUnfreezeScroll();
+        }
     });
 });
 $(window).scroll(function () {
